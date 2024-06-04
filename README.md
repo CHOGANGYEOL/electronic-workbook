@@ -6,6 +6,8 @@
 
 목적 - 이동간 자격증 시험 시 필기 기출문제를 간편하게 핸드폰으로 연습하기 위해 만듬
 
+---
+
 ### Tech Stack
 
 - package
@@ -24,6 +26,8 @@
   - eslint
   - prettier
 
+---
+
 ### Folder Tree
 
 ```bash
@@ -37,6 +41,8 @@
 	- lib
 	- pages
 ```
+
+---
 
 ### Command
 
