@@ -3,7 +3,7 @@ import { Question } from '../types';
 export default <Question>{
 	questionId: 1,
 	createAt: 2020,
-	order: 1,
+	order: 2,
 	total: 60,
 	contents: [
 		{

@@ -1,4 +1,5 @@
+import Data from './Data';
 import Main from './Main';
-import Test from './Test';
+import Question from './Question';
 
-export const Pages = { Main, Test };
+export const Pages = { Main, Data, Question };

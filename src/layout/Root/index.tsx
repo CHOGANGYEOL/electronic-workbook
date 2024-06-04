@@ -20,8 +20,7 @@ const Container = styled.main`
 	justify-content: center;
 	min-height: 100vh;
 	background: linear-gradient(-45deg, ${({ theme }) => `${theme.colors.primary[600]}, ${theme.colors.primary[400]}`});
-	/* background-color: ${({ theme }) => theme.colors.primary[500]}; */
-	padding: 4rem 2.4rem;
+	padding: 7.4rem 2.4rem 4rem;
 	#inner {
 		width: 100%;
 		max-width: 50rem;

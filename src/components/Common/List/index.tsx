@@ -17,6 +17,16 @@ const List = <T extends object>({ items, renderItem }: ListProps<T>) => {
 	);
 };
 
-const Wrapper = styled.ul``;
+const Wrapper = styled.ul`
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	li {
+		&:not(:last-child) {
+			padding-bottom: 0.8rem;
+			border-bottom: 1px solid ${({ theme }) => theme.colors.gray[300]};
+		}
+	}
+`;
 
 export default List;

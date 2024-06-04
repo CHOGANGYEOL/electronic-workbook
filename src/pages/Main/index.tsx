@@ -21,7 +21,7 @@ const Main = () => {
 				<List
 					items={ALL_DATA}
 					renderItem={(item) => (
-						<Item to={`/${item.key}`}>
+						<Item to={item.key}>
 							{item.title}
 							<Icon iconID={ICON_ID.CHEVRON} $rotate={-90} />
 						</Item>
