@@ -34,7 +34,7 @@ const useQuestion = (question?: Question) => {
 		try {
 			setHistory((prev) => {
 				const tmpHistory = [...prev];
-				tmpHistory[currentIdx] = { ...content!, selectCorrect: selectIdx! };
+				tmpHistory[currentIdx] = { ...content!, selectCorrect: selectIdx! + 1 };
 				return tmpHistory;
 			});
 			if (!isLast) {
@@ -43,6 +43,7 @@ const useQuestion = (question?: Question) => {
 				setComplete(true);
 			}
 		} finally {
+			setConfirm(false);
 			setSelectIdx(null);
 		}
 	}, [content, selectIdx]);

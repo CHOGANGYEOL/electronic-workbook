@@ -14,10 +14,12 @@ interface CompleteProps {
 const Complete = ({ history }: CompleteProps) => {
 	const [isWrong, setWrong] = useState(false);
 	const wrongData = useMemo(() => history.filter((data) => data.selectCorrect !== data.correct), [history]);
+
+	const dataList = useMemo(() => (isWrong ? wrongData : history), [isWrong]);
 	return (
 		<VStack $gap="2.4rem">
 			<VStack $gap="1.6rem">
-				{(isWrong ? wrongData : history).map((data, idx) => (
+				{dataList.map((data, idx) => (
 					<React.Fragment key={'complete__item--' + String(data.contentIdx)}>
 						<Item
 							readonly
@@ -34,7 +36,7 @@ const Complete = ({ history }: CompleteProps) => {
 								},
 							}}
 						/>
-						{((isWrong && wrongData.length - 1 !== idx) || (!isWrong && history.length - 1 !== idx)) && <Divide />}
+						{dataList.length - 1 !== idx && <Divide />}
 					</React.Fragment>
 				))}
 			</VStack>

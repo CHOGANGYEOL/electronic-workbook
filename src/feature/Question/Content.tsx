@@ -6,6 +6,7 @@ import Item from './Item';
 import useQuestion from './useQuestion';
 import { Button } from '../../components/Button';
 import { HStack } from '../../components/Common';
+import Divide from '../../components/Common/Divide';
 
 const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion> }) => {
 	const { content, onSelect, selectIdx, setSelectIdx, handleConfirm, isConfirm, isLast } = questionData;
@@ -38,6 +39,8 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 					setSelectIdx(idx);
 				}}
 			/>
+
+			<Divide />
 			<HStack $gap="1.2rem" $justifyContent="flex-end">
 				<Button
 					$buttonType="LINE"
@@ -48,7 +51,7 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 				>
 					{!isConfirm ? '정답 확인' : '되돌리기'}
 				</Button>
-				<Button $padding="0 2.4rem" type="submit" disabled={!selectIdx}>
+				<Button $padding="0 2.4rem" type="submit" disabled={selectIdx === null}>
 					{isLast ? '결과' : '다음'}
 				</Button>
 			</HStack>
@@ -59,6 +62,7 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 const Form = styled.form`
 	display: flex;
 	flex-direction: column;
-	gap: 2.4rem;
+	gap: 2rem;
 `;
+
 export default Content;
