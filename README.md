@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Electronic Workbook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Project Description
 
-Currently, two official plugins are available:
+개인적으로 사용하기 위한 연습용 전자 필기시험 프로젝트
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+목적 - 이동간 자격증 시험 시 필기 기출문제를 간편하게 핸드폰으로 연습하기 위해 만듬
 
-## Expanding the ESLint configuration
+### Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- package
+  - pnpm
+- library
+  - vite
+    - 프로젝트 building용으로 사용 ESModule을 이용해 빠른 HMR을 지원하기 떄문에 채용
+    - TDD로 진행하지 않기때문에 create-react-app의 필요성을 느끼지 못했으며, 기본 구조 자체가 lite해지는 장점을 봄
+  - react
+  - typescript
+  - react-router-dom
+  - react-toastify
+  - styled-components
+  - gh-pages
+    - 쉬운 github page 배포를 위해 채용
+  - eslint
+  - prettier
 
-- Configure the top-level `parserOptions` property like this:
+### Folder Tree
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+- public
+	- images
+- src
+	- assets
+	- components
+	- context
+	- layout
+	- lib
+	- pages
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Command
+
+```bash
+> pnpm run dev // dev server open
+> pnpm run build // project build
+> pnpm run lint // eslint check
+> pnpm run preview // vite preview
+> pnpm run predeploy // gh-pages pre deploy
+> pnpm run deploy // gh-pages deploy
+```
