@@ -15,6 +15,7 @@ interface Question {
 }
 
 interface Content {
+	contentIdx: number;
 	question: string; // 질문
 	questionBody?: React.ReactNode; // 질문
 	answer: string[]; // 문제 리스트

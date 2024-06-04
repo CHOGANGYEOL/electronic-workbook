@@ -10,6 +10,7 @@ export const MOCK_QUESTION_DATA: Question = {
 	total: 60,
 	contents: [
 		{
+			contentIdx: 0,
 			question: '',
 			answer: [],
 			correct: 2,

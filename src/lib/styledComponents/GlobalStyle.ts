@@ -16,6 +16,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   ${barStyle()}
+  font-family: "Noto Sans KR", sans-serif;
 }
 button {
   border: none;

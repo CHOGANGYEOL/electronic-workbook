@@ -28,7 +28,7 @@ const Data = () => {
 						items={data.questions}
 						renderItem={(item) => (
 							<Item to={String(item.questionId)}>
-								{item.createAt} - {item.order.toString().padStart(2, '0')}
+								{item.createAt}년 - {item.order.toString().padStart(2, '0')}회차
 								<Icon iconID={ICON_ID.CHEVRON} $rotate={-90} />
 							</Item>
 						)}

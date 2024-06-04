@@ -16,7 +16,6 @@ type ConditionFunction = (item: string, idx: number) => boolean;
 interface ItemProps {
 	readonly?: boolean;
 	content: Content;
-	contentIdx: number;
 	condition: {
 		active: ConditionFunction;
 		correct: ConditionFunction;
@@ -24,12 +23,12 @@ interface ItemProps {
 	};
 	onItemClick?: (item: string, idx: number) => void;
 }
-const Item = ({ content, contentIdx, condition, onItemClick, readonly = false }: ItemProps) => {
+const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) => {
 	return (
 		<VStack $gap="2.4rem">
 			<HStack $gap="1.2rem">
 				<ItemHead>
-					{contentIdx + 1}. {content.question}
+					{content.contentIdx}. {content.question}
 				</ItemHead>
 				{content.questionBody}
 			</HStack>
