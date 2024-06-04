@@ -12,6 +12,10 @@ export const router = createHashRouter([
 				path: '',
 				element: <Pages.Main />,
 			},
+			{
+				path: ':key',
+				element: <Pages.Test />,
+			},
 		],
 	},
 ]);

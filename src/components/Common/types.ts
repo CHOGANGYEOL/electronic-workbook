@@ -1,3 +1,7 @@
+import React from 'react';
+
+import { css } from 'styled-components';
+
 type Direction =
 	| 'column'
 	| 'column-reverse'
@@ -57,4 +61,11 @@ export interface FlexProps {
 	$justifyContent?: JustifyContent;
 	$alignItems?: AlignItems;
 	$alignSelf?: AlignSelf;
+}
+
+export interface Children {
+	children: React.ReactNode;
+}
+export interface CSS {
+	$css?: ReturnType<typeof css>;
 }

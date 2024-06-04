@@ -88,7 +88,7 @@ const font = {
 } as const;
 
 const shadow = {
-	modal: '0px 4px 16px rgba(31, 33, 42, 0.06)',
+	modal: '0px 4px 16px rgba(31, 33, 42, 0.08)',
 	tooltip: '0px 2px 12px 0px rgba(0, 0, 0, 0.25)',
 };
 
