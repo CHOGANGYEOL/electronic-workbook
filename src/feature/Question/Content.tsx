@@ -8,7 +8,7 @@ import { Button } from '../../components/Button';
 import { HStack } from '../../components/Common';
 
 const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion> }) => {
-	const { content, currentIdx, onSelect, selectIdx, setSelectIdx, handleConfirm, isConfirm, isLast } = questionData;
+	const { content, onSelect, selectIdx, setSelectIdx, handleConfirm, isConfirm, isLast } = questionData;
 
 	const onSubmit = useCallback(
 		(e: FormEvent<HTMLFormElement>) => {
@@ -23,7 +23,6 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 		<Form {...{ onSubmit }}>
 			<Item
 				content={content}
-				contentIdx={currentIdx}
 				condition={{
 					active: (_, idx) => {
 						return selectIdx === idx;
