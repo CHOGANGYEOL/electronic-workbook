@@ -25,7 +25,7 @@ const Container = styled.div`
 	.spinner {
 		width: 5rem;
 		height: 5rem;
-		border: 3px solid ${({ theme }) => theme.colors.primary[600]};
+		border: 3px solid ${({ theme }) => theme.colors.primary[500]};
 		border-radius: 50%;
 		border-top-color: ${({ theme }) => theme.colors.white};
 
