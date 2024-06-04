@@ -49,7 +49,7 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 				>
 					{!isConfirm ? '정답 확인' : '되돌리기'}
 				</Button>
-				<Button $padding="0 2.4rem" type="submit">
+				<Button $padding="0 2.4rem" type="submit" disabled={!selectIdx}>
 					{isLast ? '결과' : '다음'}
 				</Button>
 			</HStack>
