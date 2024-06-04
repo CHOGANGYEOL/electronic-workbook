@@ -19,6 +19,7 @@ const Complete = ({ history }: CompleteProps) => {
 	return (
 		<VStack $gap="2.4rem">
 			<VStack $gap="1.6rem">
+				{dataList.length === 0 && <span>데이터가 없습니다.</span>}
 				{dataList.map((data, idx) => (
 					<React.Fragment key={'complete__item--' + String(data.contentIdx)}>
 						<Item
