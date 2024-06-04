@@ -8,6 +8,7 @@ import context from '../../context';
 import Complete from '../../feature/Question/Complete';
 import Content from '../../feature/Question/Content';
 import useQuestion from '../../feature/Question/useQuestion';
+import { HEADER_HEIGHT } from '../../layout/Header/const';
 
 const Question = () => {
 	const { question } = context.detail.useState();
@@ -48,8 +49,11 @@ const Counter = styled(HStack)`
 		color: ${({ theme }) => theme.colors.primary[600]};
 		font-weight: 600;
 	}
-	padding-bottom: 1.2rem;
+	padding: 1.2rem 0;
 	border-bottom: 1px solid ${({ theme }) => theme.colors.gray[500]};
+	position: sticky;
+	top: ${HEADER_HEIGHT};
+	background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export default Question;

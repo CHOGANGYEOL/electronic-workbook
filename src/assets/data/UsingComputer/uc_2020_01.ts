@@ -11,7 +11,14 @@ export default <Question>{
 			question: '다음 중 사운드의 압축 및 복원과 관련된 기술에 해당하지 않는 것은?',
 			answer: ['FLAC', 'AIFF', 'H.264', 'WAV'],
 			correct: 3,
-			score: 1,
+			score: 30,
+		},
+		{
+			contentId: 2,
+			question: '다음 중 사운드의 압축 및 복원과 관련된 기술에 해당하지 않는 것은?',
+			answer: ['FLAC', 'AIFF', 'H.264', 'WAV'],
+			correct: 3,
+			score: 30,
 		},
 	],
 };
