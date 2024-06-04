@@ -106,7 +106,7 @@ Error generating stack: `+l.message+`
 	flex-direction: column;
 `;const _1=Br(Zh)`
 	flex-direction: row;
-`,P1=()=>Ze.jsxs(_1,{$alignItems:"center",$justifyContent:"center",style:{flex:"1"},children:[Ze.jsx(Xh,{}),"is Loading"]}),T1={Main:P1},R1=Jv([{path:"/",element:Ze.jsx(x1,{}),children:[{path:"",element:Ze.jsx(T1.Main,{})}]}]),L1=()=>Ur`
+`,P1=()=>Ze.jsxs(_1,{$alignItems:"center",$justifyContent:"center",style:{flex:"1"},children:[Ze.jsx(Xh,{}),"is Loading"]}),T1={Main:P1},R1=Jv([{path:"/",element:Ze.jsx(x1,{}),children:[{path:"index",element:Ze.jsx(T1.Main,{})}]}]),L1=()=>Ur`
 	&::-webkit-scrollbar {
 		width: 1rem;
 		height: 1rem;
