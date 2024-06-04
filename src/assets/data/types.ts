@@ -16,7 +16,8 @@ interface Question {
 
 interface Content {
 	contentId: number;
-	question: React.ReactNode; // 질문
+	question: string; // 질문
+	questionBody?: React.ReactNode; // 질문
 	answer: string[]; // 문제 리스트
 	correct: number; // 정답 번호 문제리스트의 idx값으로 설정
 	score: number; // 배당 점수

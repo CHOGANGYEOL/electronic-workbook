@@ -1,31 +1,39 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-interface ListProps<T> {
-	items: T[];
-	renderItem: (item: T) => React.ReactNode;
+interface StyleProps {
+	$hasBorder?: boolean;
 }
 
-const List = <T extends object>({ items, renderItem }: ListProps<T>) => {
+interface ListProps<T> extends StyleProps {
+	items: T[];
+	renderItem: (item: T, idx: number) => React.ReactNode;
+}
+
+const List = <T extends object | string>({ items, renderItem, $hasBorder = true }: ListProps<T>) => {
 	return (
-		<Wrapper>
+		<Wrapper {...{ $hasBorder }}>
 			{items.map((item, idx) => (
-				<li key={'list--' + String(idx)}>{renderItem(item)}</li>
+				<li key={'list--' + String(idx)}>{renderItem(item, idx)}</li>
 			))}
 		</Wrapper>
 	);
 };
 
-const Wrapper = styled.ul`
+const Wrapper = styled.ul<StyleProps>`
 	display: flex;
 	flex-direction: column;
 	gap: 0.8rem;
 	li {
-		&:not(:last-child) {
-			padding-bottom: 0.8rem;
-			border-bottom: 1px solid ${({ theme }) => theme.colors.gray[300]};
-		}
+		${({ $hasBorder }) =>
+			$hasBorder &&
+			css`
+				&:not(:last-child) {
+					padding-bottom: 0.8rem;
+					border-bottom: 1px solid ${({ theme }) => theme.colors.gray[300]};
+				}
+			`}
 	}
 `;
 

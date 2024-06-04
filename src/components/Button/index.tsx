@@ -25,7 +25,7 @@ export const Button = (props: ButtonProps) => {
 		$corner = 'ROUNDED',
 		$fontSize = 'label_2',
 		$fontWeight = 400,
-		$height = '3.8rem',
+		$height = '4.8rem',
 		$padding = '0 1.2rem',
 		children,
 		type = 'button',
@@ -91,8 +91,8 @@ const ButtonElement = styled.button<StyleProps>`
 	}}
 
 	${({ $corner }) =>
-		$corner === 'RECTANGULAR' &&
+		$corner === 'ROUNDED' &&
 		css`
-			border-radius: 0px;
+			border-radius: 6px;
 		`}
 `;
