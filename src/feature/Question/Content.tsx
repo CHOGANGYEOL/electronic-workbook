@@ -29,7 +29,7 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 						return selectIdx === idx;
 					},
 					correct: (_, idx) => {
-						return isConfirm && content.correct === idx;
+						return isConfirm && content.correct === idx + 1;
 					},
 					wrong: (_, idx) => {
 						return isConfirm && selectIdx === idx;

@@ -1,43 +1,58 @@
 import { useCallback, useMemo, useState } from 'react';
 
 import { QuestionHistoryList } from './types';
-import context from '../../../context';
+import { Question } from '../../../assets/data/types';
 
-const useQuestion = () => {
-	const { question } = context.detail.useState();
+const useQuestion = (question?: Question) => {
+	// 현제 문제 idx
+	const [currentIdx, setCurrentIdx] = useState(0);
+
+	// idx에 맞는 문제 object
+	const content = useMemo(() => question?.contents[currentIdx], [question, currentIdx]);
+
+	// 정답 확인 여부
 	const [isConfirm, setConfirm] = useState(false);
-
+	// 정답 확인 handler
 	const handleConfirm = useCallback(() => {
 		setConfirm((prev) => !prev);
 	}, []);
 
+	// 선택한 정답 idx
 	const [selectIdx, setSelectIdx] = useState<number | null>(null);
 
-	const [currentIdx, setCurrentIdx] = useState(0);
-
+	// 마지막 문제인지 여부
 	const isLast = useMemo(() => question && question.contents.length - 1 === currentIdx, [question, currentIdx]);
 
-	const content = useMemo(() => question?.contents[currentIdx], [question, currentIdx]);
+	// 문제 내역 저장
 	const [history, setHistory] = useState<QuestionHistoryList>([]);
+
+	// 시험 종료 여부
 	const [isComplete, setComplete] = useState(false);
 
+	// 선택 후 다음 || 확인 버튼 클릭시
 	const onSelect = useCallback(() => {
-		setHistory((prev) => {
-			const tmpHistory = [...prev];
-			tmpHistory[currentIdx] = { ...content!, selectCorrect: selectIdx! };
-			return tmpHistory;
-		});
-		if (!isLast) {
-			setCurrentIdx((prev) => (prev += 1));
-		} else {
-			setComplete(true);
+		try {
+			setHistory((prev) => {
+				const tmpHistory = [...prev];
+				tmpHistory[currentIdx] = { ...content!, selectCorrect: selectIdx! };
+				return tmpHistory;
+			});
+			if (!isLast) {
+				setCurrentIdx((prev) => (prev += 1));
+			} else {
+				setComplete(true);
+			}
+		} finally {
+			setSelectIdx(null);
 		}
 	}, [content, selectIdx]);
 
+	// 점수
 	const count = useMemo(
 		() => history.reduce((acc, cur) => (cur.correct === cur.selectCorrect ? acc + cur.score : acc), 0),
 		[history],
 	);
+
 	return {
 		count,
 		onSelect,

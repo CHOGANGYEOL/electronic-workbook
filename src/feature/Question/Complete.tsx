@@ -22,7 +22,7 @@ const Complete = ({ history }: CompleteProps) => {
 								return data.selectCorrect === idx;
 							},
 							correct: (_, idx) => {
-								return data.correct === idx;
+								return data.correct === idx + 1;
 							},
 							wrong: (_, idx) => {
 								return data.selectCorrect === idx && data.correct !== idx;

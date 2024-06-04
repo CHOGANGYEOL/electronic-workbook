@@ -13,32 +13,30 @@ import { HEADER_HEIGHT } from '../../layout/Header/const';
 const Question = () => {
 	const { question } = context.detail.useState();
 
-	const questionData = useQuestion();
+	const questionData = useQuestion(question);
 	const { count, isComplete, history } = questionData;
 
-	if (!question) {
-		return <Navigate to={'/'} />;
-	} else {
-		return (
-			<VStack $gap="2.4rem" $flex="1">
-				<Title>
-					{question.createAt}년 - {question.order.toString().padStart(2, '0')}회차
-				</Title>
-				<Article
-					$css={css`
-						flex: 1;
-					`}
-				>
-					<VStack $gap="2.4rem">
-						<Counter $justifyContent="flex-end" $gap="0.4rem">
-							점수 : <span className="count">{count}</span> / <span className="total">{question.total}</span>
-						</Counter>
-						{!isComplete ? <Content {...{ questionData }} /> : <Complete {...{ history }} />}
-					</VStack>
-				</Article>
-			</VStack>
-		);
-	}
+	if (!question) return <Navigate to={'/'} />;
+
+	return (
+		<VStack $gap="2.4rem" $flex="1">
+			<Title>
+				{question.createAt}년 - {question.order.toString().padStart(2, '0')}회차
+			</Title>
+			<Article
+				$css={css`
+					flex: 1;
+				`}
+			>
+				<VStack $gap="2.4rem">
+					<Counter $justifyContent="flex-end" $gap="0.4rem">
+						점수 : <span className="count">{count}</span> / <span className="total">{question.total}</span>
+					</Counter>
+					{!isComplete ? <Content {...{ questionData }} /> : <Complete {...{ history }} />}
+				</VStack>
+			</Article>
+		</VStack>
+	);
 };
 
 const Counter = styled(HStack)`

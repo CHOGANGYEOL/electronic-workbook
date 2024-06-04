@@ -15,7 +15,7 @@ interface DetailContextValue {
 const DetailContext = createContext<DetailContextValue | null>(null);
 
 export const DetailProvider = ({ children }: Children) => {
-	const { key, questionId, contentId } = useParams();
+	const { key, questionId } = useParams();
 
 	const data = useMemo(() => ALL_DATA.find((el) => el.key === key), [key]);
 	const question = useMemo(
@@ -23,12 +23,7 @@ export const DetailProvider = ({ children }: Children) => {
 		[data, questionId],
 	);
 
-	const content = useMemo(
-		() => question?.contents.find((el) => el.contentId === Number(contentId)),
-		[question, contentId],
-	);
-
-	return <DetailContext.Provider value={{ data, question, content }}>{children}</DetailContext.Provider>;
+	return <DetailContext.Provider value={{ data, question }}>{children}</DetailContext.Provider>;
 };
 
 const useState = () => {
