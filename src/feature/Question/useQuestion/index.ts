@@ -1,8 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
 
-import { toast } from 'react-toastify';
-
-import { QUESTION_MESSAGE } from './const';
 import { QuestionHistoryList } from './types';
 import context from '../../../context';
 
@@ -13,12 +10,16 @@ const useQuestion = () => {
 	const handleConfirm = useCallback(() => {
 		setConfirm((prev) => !prev);
 	}, []);
+
 	const [selectIdx, setSelectIdx] = useState<number | null>(null);
 
 	const [currentIdx, setCurrentIdx] = useState(0);
 
+	const isLast = useMemo(() => question && question.contents.length - 1 === currentIdx, [question, currentIdx]);
+
 	const content = useMemo(() => question?.contents[currentIdx], [question, currentIdx]);
 	const [history, setHistory] = useState<QuestionHistoryList>([]);
+	const [isComplete, setComplete] = useState(false);
 
 	const onSelect = useCallback(() => {
 		setHistory((prev) => {
@@ -26,15 +27,12 @@ const useQuestion = () => {
 			tmpHistory[currentIdx] = { ...content!, selectCorrect: selectIdx! };
 			return tmpHistory;
 		});
-	}, [content, selectIdx]);
-
-	const handleNext = useCallback(() => {
-		if (question && question.contents.length - 1 !== currentIdx) {
+		if (!isLast) {
 			setCurrentIdx((prev) => (prev += 1));
 		} else {
-			toast.error(QUESTION_MESSAGE.NEXT_ERROR);
+			setComplete(true);
 		}
-	}, []);
+	}, [content, selectIdx]);
 
 	const count = useMemo(
 		() => history.reduce((acc, cur) => (cur.correct === cur.selectCorrect ? acc + cur.score : acc), 0),
@@ -45,12 +43,13 @@ const useQuestion = () => {
 		onSelect,
 		content,
 		history,
-		handleNext,
+		isLast,
 		currentIdx,
 		selectIdx,
 		setSelectIdx,
 		handleConfirm,
 		isConfirm,
+		isComplete,
 	};
 };
 export default useQuestion;
