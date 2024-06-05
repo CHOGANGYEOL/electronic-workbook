@@ -23,7 +23,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.header`
-	background-color: ${({ theme }) => theme.colors.primary[300]};
+	background-color: ${({ theme }) => theme.colors.gray[600]};
 	position: fixed;
 	left: 0;
 	right: 0;

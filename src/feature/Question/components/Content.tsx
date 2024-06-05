@@ -3,13 +3,13 @@ import { FormEvent, useCallback } from 'react';
 import styled from 'styled-components';
 
 import Item from './Item';
-import useQuestion from './useQuestion';
-import { Button } from '../../components/Button';
-import { HStack } from '../../components/Common';
-import Divide from '../../components/Common/Divide';
+import { Button } from '../../../components/Button';
+import { HStack } from '../../../components/Common';
+import Divide from '../../../components/Common/Divide';
+import useQuestion from '../useQuestion';
 
 const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion> }) => {
-	const { content, onSelect, selectIdx, setSelectIdx, handleConfirm, isConfirm, isLast } = questionData;
+	const { content, onSelect, selectIdx, setSelectIdx, handleConfirm, isConfirm, isLast, handleClose } = questionData;
 
 	const onSubmit = useCallback(
 		(e: FormEvent<HTMLFormElement>) => {
@@ -42,6 +42,16 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 
 			<Divide />
 			<HStack $gap="1.2rem" $justifyContent="flex-end">
+				<Button
+					$buttonType="FILLED"
+					$color={'RED'}
+					style={{ marginRight: 'auto' }}
+					onClick={() => {
+						handleClose();
+					}}
+				>
+					강제 종료
+				</Button>
 				<Button
 					$buttonType="LINE"
 					$color={!isConfirm ? 'PRIMARY' : 'TERTIARY'}

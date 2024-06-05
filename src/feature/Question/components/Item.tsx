@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { Content } from '../../assets/data/types';
-import { HStack, VStack } from '../../components/Common';
-import List from '../../components/Common/List';
+import { Content } from '../../../assets/data/types';
+import { HStack, VStack } from '../../../components/Common';
+import List from '../../../components/Common/List';
 
 interface StyleProps {
 	$isActive: boolean;
@@ -28,13 +28,16 @@ const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) 
 		<VStack $gap="2.4rem">
 			<HStack $gap="1.2rem">
 				<ItemHead>
-					{content.contentIdx}. {content.question}
+					<span>{content.contentIdx}.</span>
+					<p>{content.question}</p>
 				</ItemHead>
 				{content.questionBody}
 			</HStack>
 			<List
 				$hasBorder={false}
 				items={content.answer}
+				$listStyle={'auto'}
+				$gap="1.2rem"
 				renderItem={(item, idx) => (
 					<ListItem
 						$readonly={readonly}
@@ -45,7 +48,7 @@ const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) 
 						$isCorrect={condition.correct(item, idx)}
 						$isWrong={condition.wrong(item, idx)}
 					>
-						{(idx + 1).toString()}. {item}
+						{item}
 					</ListItem>
 				)}
 			/>
@@ -53,12 +56,16 @@ const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) 
 	);
 };
 
-const ItemHead = styled.h4`
-	${({ theme }) => theme.font.title[2]}
+const ItemHead = styled.h5`
+	display: flex;
+	gap: 0.6rem;
+	${({ theme }) => theme.font.title[3]}
+	p {
+	}
 `;
 
 const ListItem = styled.p<StyleProps>`
-	${({ theme }) => theme.font.body[1]}
+	${({ theme }) => theme.font.body[2]}
 	${({ $isActive }) =>
 		$isActive &&
 		css`

@@ -3,10 +3,10 @@ import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 
 import Item from './Item';
-import { QuestionHistoryList } from './useQuestion/types';
-import { Button } from '../../components/Button';
-import { VStack } from '../../components/Common';
-import Divide from '../../components/Common/Divide';
+import { Button } from '../../../components/Button';
+import { VStack } from '../../../components/Common';
+import Divide from '../../../components/Common/Divide';
+import { QuestionHistoryList } from '../useQuestion/types';
 
 interface CompleteProps {
 	history: QuestionHistoryList;
@@ -47,7 +47,7 @@ const Complete = ({ history }: CompleteProps) => {
 					setWrong((prev) => !prev);
 				}}
 			>
-				{isWrong ? '전체 보기' : '틀린 문제만 보기'}
+				{isWrong ? '전체 보기' : '오답 노트'}
 			</WrongButton>
 		</VStack>
 	);

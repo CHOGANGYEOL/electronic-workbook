@@ -10,7 +10,7 @@ interface Question {
 	questionId: number;
 	createAt: number; // 2020
 	order: number; // 회차 1
-	total: number; // 토탈 점수 100
+	total?: number; // 토탈 점수 - 넣지 않을 시 contents length
 	contents: Content[];
 }
 
@@ -20,7 +20,7 @@ interface Content {
 	questionBody?: React.ReactNode; // 질문
 	answer: string[]; // 문제 리스트
 	correct: number; // 정답 번호
-	score: number; // 배당 점수
+	score?: number; // 배당 점수 - 넣지 않을 시 기본 1점
 }
 
 export type { Data, Question, Content };

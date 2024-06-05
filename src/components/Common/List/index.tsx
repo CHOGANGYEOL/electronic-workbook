@@ -4,6 +4,8 @@ import styled, { css } from 'styled-components';
 
 interface StyleProps {
 	$hasBorder?: boolean;
+	$listStyle?: string;
+	$gap?: string;
 }
 
 interface ListProps<T> extends StyleProps {
@@ -11,9 +13,15 @@ interface ListProps<T> extends StyleProps {
 	renderItem: (item: T, idx: number) => React.ReactNode;
 }
 
-const List = <T extends object | string>({ items, renderItem, $hasBorder = true }: ListProps<T>) => {
+const List = <T extends object | string>({
+	items,
+	renderItem,
+	$hasBorder = true,
+	$listStyle = 'none',
+	$gap = '0.8rem',
+}: ListProps<T>) => {
 	return (
-		<Wrapper {...{ $hasBorder }}>
+		<Wrapper {...{ $hasBorder, $listStyle, $gap }}>
 			{items.map((item, idx) => (
 				<li key={'list--' + String(idx)}>{renderItem(item, idx)}</li>
 			))}
@@ -21,10 +29,15 @@ const List = <T extends object | string>({ items, renderItem, $hasBorder = true 
 	);
 };
 
-const Wrapper = styled.ul<StyleProps>`
+const Wrapper = styled.ol<StyleProps>`
 	display: flex;
 	flex-direction: column;
-	gap: 0.8rem;
+	gap: ${({ $gap }) => $gap};
+	${({ $listStyle }) =>
+		$listStyle !== 'none' &&
+		css`
+			padding-left: 2rem;
+		`};
 	li {
 		${({ $hasBorder }) =>
 			$hasBorder &&
@@ -33,7 +46,8 @@ const Wrapper = styled.ul<StyleProps>`
 					padding-bottom: 0.8rem;
 					border-bottom: 1px solid ${({ theme }) => theme.colors.gray[300]};
 				}
-			`}
+			`};
+		list-style: ${({ $listStyle }) => $listStyle};
 	}
 `;
 

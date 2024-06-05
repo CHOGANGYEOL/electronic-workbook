@@ -4,14 +4,12 @@ export default <Question>{
 	questionId: 1,
 	createAt: 2020,
 	order: 1,
-	total: 60,
 	contents: [
 		{
 			contentIdx: 1,
 			question: '다음 중 사운드의 압축 및 복원과 관련된 기술에 해당하지 않는 것은?',
 			answer: ['FLAC', 'AIFF', 'H.264', 'WAV'],
 			correct: 3,
-			score: 1,
 		},
 		{
 			contentIdx: 2,
@@ -19,7 +17,6 @@ export default <Question>{
 				'다음 중 컴퓨터 게임이나 컴퓨터 기반 훈련과 같이 사용자와의 상호작용을 통해 진행 상황을 제어하는 멀티미디어의 특징을 나타내는 용어는?',
 			answer: ['선형 콘텐츠', '비선형 콘텐츠', 'VR 콘텐츠', '4D 콘텐츠'],
 			correct: 2,
-			score: 1,
 		},
 		{
 			contentIdx: 3,
@@ -31,7 +28,6 @@ export default <Question>{
 				'사용자가 증가할 경우 상대적으로 관리해야 할 키의 수가 많아진다.',
 			],
 			correct: 3,
-			score: 1,
 		},
 		{
 			contentIdx: 4,
@@ -43,7 +39,6 @@ export default <Question>{
 				'키보드의 키 입력시 캐치 프로그램을 사용하여 ID나 암호 정보를 빼내는 행위',
 			],
 			correct: 3,
-			score: 1,
 		},
 		{
 			contentIdx: 5,
@@ -55,7 +50,6 @@ export default <Question>{
 				'보컬텍(VocalTec)사의 인터넷폰으로 처음 소개되었으며, PC to PC, PC to Phone, Phone to Phone 방식으로 발전하였다.',
 			],
 			correct: 2,
-			score: 1,
 		},
 		{
 			contentIdx: 6,
@@ -68,7 +62,6 @@ export default <Question>{
 				'메타데이터(Metadata)',
 			],
 			correct: 2,
-			score: 1,
 		},
 		{
 			contentIdx: 7,
@@ -80,7 +73,6 @@ export default <Question>{
 				'네트워크 기반 하드웨어 연결문제 해결 기능',
 			],
 			correct: 4,
-			score: 1,
 		},
 		{
 			contentIdx: 8,
@@ -93,7 +85,6 @@ export default <Question>{
 				'현재 자신의 컴퓨터에 연결된 다른 컴퓨터의 IP 주소나 포트 정보를 확인할 수 있다.',
 			],
 			correct: 4,
-			score: 1,
 		},
 		{
 			contentIdx: 9,
@@ -105,7 +96,6 @@ export default <Question>{
 				'실시간 흐름 제어로 향상된 멀티미디어 기능을 지원한다.',
 			],
 			correct: 2,
-			score: 1,
 		},
 		{
 			contentIdx: 10,
@@ -117,7 +107,6 @@ export default <Question>{
 				'프로그램의 구조와 절차에 중점을 두고 작업을 진행한다.',
 			],
 			correct: 3,
-			score: 1,
 		},
 		{
 			contentIdx: 11,
@@ -129,7 +118,6 @@ export default <Question>{
 				'확장 ASCII 코드는 8비트를 사용하여 문자를 표현한다.',
 			],
 			correct: 3,
-			score: 1,
 		},
 		{
 			contentIdx: 12,
@@ -142,7 +130,6 @@ export default <Question>{
 				'다중 처리 시스템(Multi-Processing System)',
 			],
 			correct: 4,
-			score: 1,
 		},
 		{
 			contentIdx: 13,
@@ -154,289 +141,288 @@ export default <Question>{
 				'메모리 주소 레지스터: 기억장치에 입출력되는 데이터의 번지를 기억한다.',
 			],
 			correct: 1,
-			score: 1,
 		},
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 3,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 2,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 1,
-		// 	score: 1,
+		//
 		// },
 		// {
 		// 	question: '',
 		// 	answer: [],
 		// 	correct: 4,
-		// 	score: 1,
+		//
 		// },
 	],
 };

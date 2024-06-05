@@ -70,7 +70,7 @@ const font = {
 	title: {
 		1: 'font-size:2.0rem; line-height:3.2rem; letter-spacing: -.3px;',
 		2: 'font-size:1.8rem; line-height:2.8rem; letter-spacing: 0px;',
-		3: 'font-size:1.6rem; line-height:2.4rem; letter-spacing: 0px;',
+		3: 'font-size:1.6rem; line-height:2.2rem; letter-spacing: -.3px;',
 	},
 	body: {
 		1: 'font-size:1.5rem; line-height:2.2rem; letter-spacing: 0px;',

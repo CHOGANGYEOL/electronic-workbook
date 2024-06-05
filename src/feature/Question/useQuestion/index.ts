@@ -28,6 +28,10 @@ const useQuestion = (question?: Question) => {
 
 	// 시험 종료 여부
 	const [isComplete, setComplete] = useState(false);
+	// 시험 종료 함수
+	const handleClose = useCallback(() => {
+		setComplete(true);
+	}, []);
 
 	// 선택 후 다음 || 확인 버튼 클릭시
 	const onSelect = useCallback(() => {
@@ -40,7 +44,7 @@ const useQuestion = (question?: Question) => {
 			if (!isLast) {
 				setCurrentIdx((prev) => (prev += 1));
 			} else {
-				setComplete(true);
+				handleClose();
 			}
 		} finally {
 			setConfirm(false);
@@ -50,7 +54,7 @@ const useQuestion = (question?: Question) => {
 
 	// 점수
 	const count = useMemo(
-		() => history.reduce((acc, cur) => (cur.correct === cur.selectCorrect ? acc + cur.score : acc), 0),
+		() => history.reduce((acc, cur) => (cur.correct === cur.selectCorrect ? acc + (cur.score ?? 1) : acc), 0),
 		[history],
 	);
 
@@ -66,6 +70,7 @@ const useQuestion = (question?: Question) => {
 		handleConfirm,
 		isConfirm,
 		isComplete,
+		handleClose,
 	};
 };
 export default useQuestion;
