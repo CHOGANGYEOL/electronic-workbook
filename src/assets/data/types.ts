@@ -14,7 +14,7 @@ interface Question {
 }
 
 interface Content {
-	contentIdx: number;
+	contentId: number;
 	question: React.ReactNode; // 질문
 	questionBody?: React.ReactNode; // 질문
 	answer: React.ReactNode[]; // 문제 리스트

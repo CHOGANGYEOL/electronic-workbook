@@ -1,19 +1,23 @@
 import { Outlet, useNavigation } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { VStack } from '../../components/Common';
 import Loading from '../../components/Common/Loading';
-import { EntireContextProvider } from '../../context';
+import Title from '../../components/Common/Title';
+import context from '../../context';
 
 const Root = () => {
 	const { state } = useNavigation();
+	const { data } = context.detail.useState();
 	return (
 		<Container>
-			<EntireContextProvider>
-				{state === 'loading' && <Loading />}
-				<section id="inner">
+			{state === 'loading' && <Loading />}
+			<section id="inner">
+				<VStack $gap="2.4rem">
+					<Title prefix={data?.title}>Electronic Workbook</Title>
 					<Outlet />
-				</section>
-			</EntireContextProvider>
+				</VStack>
+			</section>
 		</Container>
 	);
 };

@@ -8,20 +8,20 @@ export const UC_2020_01: Question = {
 	title: '2020년 1회차',
 	contents: [
 		{
-			contentIdx: 1,
+			contentId: 1,
 			question: '다음 중 사운드의 압축 및 복원과 관련된 기술에 해당하지 않는 것은?',
 			answer: ['FLAC', 'AIFF', 'H.264', 'WAV'],
 			correct: 3,
 		},
 		{
-			contentIdx: 2,
+			contentId: 2,
 			question:
 				'다음 중 컴퓨터 게임이나 컴퓨터 기반 훈련과 같이 사용자와의 상호작용을 통해 진행 상황을 제어하는 멀티미디어의 특징을 나타내는 용어는?',
 			answer: ['선형 콘텐츠', '비선형 콘텐츠', 'VR 콘텐츠', '4D 콘텐츠'],
 			correct: 2,
 		},
 		{
-			contentIdx: 3,
+			contentId: 3,
 			question: '다음 중 정보 보안을 위한 비밀키 암호화 기법에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'비밀키 암호화 기법의 안전성은 키의 길이 및 키의 비밀성 유지 여부에 영향을 많이 받는다.',
@@ -32,7 +32,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 4,
+			contentId: 4,
 			question: '다음 중 분산 서비스 거부 공격(DDos)에 관한 설명으로 옳은 것은?',
 			answer: [
 				'네트워크 주변을 돌아다니는 패킷을 엿보면서 계정과 패스워드를 알아내는 행위',
@@ -43,7 +43,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 5,
+			contentId: 5,
 			question: '다음 중 VoIP에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'인터넷 IP 기술을 사용한 디지털 음성 전송 기술이다.',
@@ -54,7 +54,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 6,
+			contentId: 6,
 			question:
 				'다음 중 대량의 데이터 안에서 일정한 패턴을 찾아내고, 이로부터 가치 있는 정보를 추출해내는 기술을 의미하는 것은?',
 			answer: [
@@ -66,7 +66,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 7,
+			contentId: 7,
 			question: '다음 중 네트워크 프로토콜(Protocol)의 기능에 해당하지 않는 것은?',
 			answer: [
 				'패킷 수를 조정하는 흐름 제어 기능',
@@ -77,7 +77,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 8,
+			contentId: 8,
 			question:
 				'다음 중 인터넷 서버까지의 경로를 추적하는 명령어인 ‘Tracert’의 실행 결과에 관한 설명으로 옳지 않은 것은?',
 			answer: [
@@ -89,7 +89,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 9,
+			contentId: 9,
 			question: '다음 중 IPv6 주소에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'16비트씩 8부분으로 총 128비트로 구성된다.',
@@ -100,7 +100,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 10,
+			contentId: 10,
 			question: '다음 중 객체지향 프로그래밍 특징으로 옳은 것은?',
 			answer: [
 				'객체에 대하여 절차적 프로그래밍의 장점을 사용할 수 있다.',
@@ -111,7 +111,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 11,
+			contentId: 11,
 			question: '다음 중 ASCII 코드에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'3개의 Zone 비트와 4개의 Digit 비트로 하나의 문자를 표현한다.',
@@ -122,7 +122,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 12,
+			contentId: 12,
 			question:
 				'다음 중 하나의 컴퓨터에 여러 개의 중앙처리장치를 설치하여 주기억장치나 주변장치들을 공유하여 신뢰성과 연산능력을 향상시키는 시스템은?',
 			answer: [
@@ -134,7 +134,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 13,
+			contentId: 13,
 			question: '다음 중 CPU의 제어장치를 구성하는 레지스터에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'프로그램 카운터: 프로그램의 실행된 명령어의 개수를 계산한다.',
@@ -145,14 +145,14 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 14,
+			contentId: 14,
 			question:
 				'다음 중 프린터에서 출력할 파일의 해상도를 조절하거나 스캐너를 이용해 스캔한 파일의 해상도를 조절하기 위해 쓰는 단위는?',
 			answer: ['CPS(Character Per Second)', 'BPS(Bits Per Second)', 'PPM(Paper Per Minute)', 'DPI(Dots Per Inch)'],
 			correct: 4,
 		},
 		{
-			contentIdx: 15,
+			contentId: 15,
 			question: '다음 중 BIOS(Basic Input Output System)에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'BIOS는 메인보드 상에 위치한 EPROM, 혹은 플래시 메모리 칩에 저장되어 있다.',
@@ -163,7 +163,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 16,
+			contentId: 16,
 			question:
 				'다음 중 반도체를 이용한 컴퓨터 보조 기억 장치로 크기가 작고 충격에 강하며, 소음 발생이 없는 대용량 저장 장치는?',
 			answer: [
@@ -175,7 +175,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 17,
+			contentId: 17,
 			question: '다음 중 Windows의 [시스템 구성]에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'Windows가 제대로 시작되지 않는 문제를 식별하도록 도와주는 고급 도구이다.',
@@ -186,7 +186,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 18,
+			contentId: 18,
 			question: '다음 중 Windows의 [폴더 옵션] 창에서 설정할 수 있는 작업으로 옳지 않은 것은?',
 			answer: [
 				'탐색 창, 미리 보기 창, 세부 정보 창의 표시 여부를 선택할 수 있다.',
@@ -197,7 +197,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 19,
+			contentId: 19,
 			question: '다음 중 Windows의 백업과 복원에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'특정한 날짜나 시간에 주기적으로 백업이 되도록 예약 할 수 있다.',
@@ -208,7 +208,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 20,
+			contentId: 20,
 			question: '다음 중 Windows의 작업 표시줄에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'작업 표시줄의 위치나 크기를 변경할 수 있으며, 크기는 화면의 1/2까지만 늘릴 수 있다.',
@@ -219,7 +219,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 21,
+			contentId: 21,
 			question: '다음 중 자동 필터와 고급 필터에 대한 설명으로 옳은 것은?',
 			answer: [
 				'자동 필터는 각 열에 입력된 데이터의 종류가 혼합되어 있는 경우 날짜, 숫자, 텍스트 필터가 모두 표시된다.',
@@ -230,7 +230,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 22,
+			contentId: 22,
 			question: '다음 중 데이터 정렬에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'대/소문자를 구분하여 정렬할 수 있다.',
@@ -241,7 +241,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 23,
+			contentId: 23,
 			question: '다음 중 시나리오에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'시나리오 요약 보고서를 만들 때에는 결과 셀을 반드시 지정해야 하지만, 시나리오 피벗 테이블 보고서를 만들 때에는 결과 셀을 지정하지 않아도 된다.',
@@ -252,7 +252,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 24,
+			contentId: 24,
 			question: '다음 중 셀 스타일에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'셀 스타일은 글꼴과 글꼴 크기, 숫자 서식, 셀 테두리, 셀 음영 등의 정의된 서식의 집합으로 셀 서식을 일관성 있게 적용하는 경우 편리하다.',
@@ -263,7 +263,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 25,
+			contentId: 25,
 			question: '다음 중 피벗 테이블과 피벗 차트에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'새 워크시트에 피벗 테이블을 생성하면 보고서 필터의 위치는 [A1] 셀, 행 레이블은 [A3] 셀에서 시작한다.',
@@ -274,7 +274,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 26,
+			contentId: 26,
 			question: '다음 중 입력 데이터에 사용자 지정 표시 형식을 설정한 경우 그 표시 결과로 옳지 않은 것은?',
 			questionBody: (
 				<table>
@@ -318,7 +318,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 27,
+			contentId: 27,
 			question:
 				'다음 중 데이터가 입력된 셀에서 채우기 핸들을 드래그 하여 데이터를 채우는 경우에 대한 설명으로 옳은 것은?',
 			answer: [
@@ -330,7 +330,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 28,
+			contentId: 28,
 			question: '다음 중 셀 포인터의 이동 작업에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'<Alt> + <Page Down> 키를 눌러 현재 시트를 기준으로 오른쪽에 있는 다음 시트로 이동한다.',
@@ -341,14 +341,14 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 29,
+			contentId: 29,
 			question: '다음 중 아래 시트의 [A9] 셀에 수식 ‘=OFFSET(B3,-1,2)’을 입력한 경우 결과값은?',
 			questionBody: <img src={IMAGES.Img_29} />,
 			answer: ['윤혜주', '서울', '고양', '박태훈'],
 			correct: 4,
 		},
 		{
-			contentIdx: 30,
+			contentId: 30,
 			question: '다음 중 [개발 도구] 탭의 [컨트롤] 그룹에 대한 설명으로 옳지 않는 것은?',
 			questionBody: <img src={IMAGES.Img_30} />,
 			answer: [
@@ -360,7 +360,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 31,
+			contentId: 31,
 			question: '다음 중 아래의 프로시저가 실행된 후 [A1] 셀에 입력되는 값으로 옳은 것은?',
 			questionBody: (
 				<RequestBody>
@@ -377,7 +377,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 32,
+			contentId: 32,
 			question: '다음 중 아래 시트에 대한 각 수식의 결과값이 나머지 셋과 다른 것은?',
 			answer: [
 				'=SMALL(A1:G1,{3})',
@@ -388,7 +388,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 33,
+			contentId: 33,
 			question:
 				'아래 시트에서 주민등록번호의 여덟 번째 문자가 ‘1’ 또는 ‘3’이면 ‘남’, ‘2’ 또는 ‘4’이면 ‘여’로 성별 정보를 알 수 있다. 다음 중 성별을 계산하기 위한 [D2] 셀의 수식으로 옳지 않은 것은? (단, [F2:F5] 영역은 숫자 데이터임)',
 			questionBody: <img src={IMAGES.Img_33} />,
@@ -401,7 +401,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 34,
+			contentId: 34,
 			question:
 				'아래 시트에서 국적별 영화 장르의 편수를 계산하기 위해 [B12] 셀에 작성해야 할 배열수식으로 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_34} />,
@@ -414,7 +414,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 35,
+			contentId: 35,
 			question: '다음 중 이름 상자에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'<Ctrl> 키를 누르고 여러 개의 셀을 선택한 경우 마지막 선택한 셀 주소가 표시된다.',
@@ -425,7 +425,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 36,
+			contentId: 36,
 			question: '다음 중 엑셀의 화면 확대/축소 작업에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'문서의 확대/축소는 10%에서 400%까지 설정할 수 있다.',
@@ -436,7 +436,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 37,
+			contentId: 37,
 			question: '다음 중 인쇄 기능에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'기본적으로 워크시트의 눈금선은 인쇄되지 않으나 인쇄되도록 설정할 수 있다.',
@@ -447,7 +447,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 38,
+			contentId: 38,
 			question: '다음 중 차트 도구의 [데이터 선택]에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'[차트 데이터 범위]에서 차트에 사용하는 데이터 전체의 범위를 수정할 수 있다.',
@@ -458,7 +458,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 39,
+			contentId: 39,
 			question:
 				'다음 중 아래 데이터를 차트로 작성하여 사원별로 각 분기의 실적을 비교·분석하려는 경우 가장 비효율적인 차트는?',
 			questionBody: <img src={IMAGES.Img_39} />,
@@ -466,7 +466,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 40,
+			contentId: 40,
 			question:
 				'다음 중 셀 영역을 선택한 후 상태 표시줄의 바로가기 메뉴인 [상태 표시줄 사용자 지정]에서 선택할 수 있는 자동 계산에 해당되지 않는 것은?',
 			answer: [
@@ -478,7 +478,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 41,
+			contentId: 41,
 			question: '다음 중 Access 파일에 암호를 설정하는 방법으로 옳은 것은?',
 			answer: [
 				'[데이터베이스 압축 및 복구] 도구에서 파일 암호를 설정할 수 있다.',
@@ -489,14 +489,14 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 42,
+			contentId: 42,
 			question:
 				'다음 중 데이터 보안 및 회복, 무결성, 병행 수행 제어 등을 정의하는 데이터베이스 언어로 데이터베이스 관리자가 데이터 관리를 목적으로 주로 사용하는 언어는?',
 			answer: ['데이터 제어어(DCL)', '데이터 부속어(DSL)', '데이터 정의어(DDL)', '데이터 조작어(DML)'],
 			correct: 1,
 		},
 		{
-			contentIdx: 43,
+			contentId: 43,
 			question: '다음 중 SQL 질의에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'ORDER BY절 사용 시 정렬 방식을 별도로 지정하지 않으면 기본 값은 ‘DESC’로 적용된다.',
@@ -507,7 +507,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 44,
+			contentId: 44,
 			question: '다음 중 보고서의 그룹화 및 정렬에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'‘그룹’은 머리글과 같은 소계 및 요약 정보와 함께 표시되는 레코드의 모음으로 그룹 머리글, 세부 레코드 및 그룹 바닥글로 구성된다.',
@@ -518,14 +518,14 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 45,
+			contentId: 45,
 			question:
 				'다음 중 보고서 작업 시 필드 목록 창에서 선택한 필드를 본문 영역에 추가할 때 자동으로 생성되는 컨트롤은?',
 			answer: ['단추', '텍스트 상자', '하이퍼링크', '언바운드 개체 틀'],
 			correct: 2,
 		},
 		{
-			contentIdx: 46,
+			contentId: 46,
 			question: '다음 중 보고서의 보기 형태에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'[보고서 보기]는 출력되는 보고서를 화면 출력용으로 보여주며 페이지를 구분하여 표시한다.',
@@ -536,7 +536,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 47,
+			contentId: 47,
 			question: '다음 중 아래 보고서에 대한 설명으로 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_47} />,
 			answer: [
@@ -548,7 +548,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 48,
+			contentId: 48,
 			question: '다음 중 아래 <학생> 테이블에 대한 SQL 문의 실행 결과로 옳은 것은?',
 			questionBody: (
 				<VStack $gap="1.2rem">
@@ -562,13 +562,13 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 49,
+			contentId: 49,
 			question: '다음 중 선택 쿼리에서 사용자가 지정한 패턴과 일치하는 데이터를 찾고자 할 때 사용되는 연산자는?',
 			answer: ['Match', 'Some', 'Like', 'Any'],
 			correct: 3,
 		},
 		{
-			contentIdx: 50,
+			contentId: 50,
 			question:
 				'다음 중 아래 SQL문으로 생성된 테이블에서의 레코드 작업에 대한 설명으로 옳지 않은 것은? (단, 고객과 계좌 간의 관계는 1:M이다.)',
 
@@ -605,13 +605,13 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 51,
+			contentId: 51,
 			question: '다음 중 테이블에서 입력 마스크를 “LA09?”로 설정한 경우 입력할 수 없는 값은?',
 			answer: ['AA111', 'A11', 'AA11', 'A111A'],
 			correct: 1,
 		},
 		{
-			contentIdx: 52,
+			contentId: 52,
 			question: '다음 중 아래 <고객>과 <구매리스트> 테이블 관계에 참조 무결성이 항상 유지되도록 설정할 수 없는 경우는?',
 			questionBody: <img src={IMAGES.Img_52} />,
 			answer: [
@@ -623,7 +623,7 @@ export const UC_2020_01: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 53,
+			contentId: 53,
 			question: '다음 중 외부 데이터 가져오기 기능에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'텍스트 파일을 가져와 기존 테이블의 레코드로 추가하려는 경우 기본 키에 해당하는 필드의 값들이 고유한 값이 되도록 데이터를 수정하며 가져올 수 있다.',
@@ -634,20 +634,20 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 54,
+			contentId: 54,
 			question:
 				'다음 중 위쪽 구역에 데이터시트를 표시하는 열 형식의 폼을 만들고, 아래쪽 구역에 선택한 레코드에 대한 정보를 수정하거나 입력할 수 있는 데이터시트 형식의 폼을 자동으로 만들어 주는 도구는?',
 			answer: ['폼', '폼 분할', '여러 항목', '폼 디자인'],
 			correct: 2,
 		},
 		{
-			contentIdx: 55,
+			contentId: 55,
 			question: '다음 중 이벤트 프로시저에서 쿼리를 실행 모드로 여는 명령은?',
 			answer: ['DoCmd.OpenQuery', 'DoCmd.SetQuery', 'DoCmd.QueryView', 'DoCmd.QueryTable'],
 			correct: 1,
 		},
 		{
-			contentIdx: 56,
+			contentId: 56,
 			question: '다음 중 폼의 구성 요소에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'폼 머리글은 인쇄할 때 모든 페이지의 상단에 매번 표시된다.',
@@ -658,7 +658,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 57,
+			contentId: 57,
 			question: '다음 중 폼 작성에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'여러 개의 컨트롤을 선택하여 자동 정렬할 수 있다.',
@@ -669,7 +669,7 @@ export const UC_2020_01: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 58,
+			contentId: 58,
 			question: '다음 중 관계형 데이터베이스의 조인(JOIN)에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'쿼리에 여러 테이블을 포함할 때는 조인을 사용하여 원하는 결과를 얻을 수 있다.',
@@ -680,7 +680,7 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 59,
+			contentId: 59,
 			question:
 				'다음 중 폼 바닥글의 텍스트 상자의 컨트롤 원본으로 <사원> 테이블에서 직급이 ‘부장’인 레코드들의 급여 평균을 구하는 함수식으로 옳은 것은?',
 			answer: [
@@ -692,7 +692,7 @@ export const UC_2020_01: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 60,
+			contentId: 60,
 			question: '다음 중 액세스의 매크로에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'반복적으로 수행되는 작업을 자동화하여 간단히 처리할 수 있도록 하는 기능이다.',

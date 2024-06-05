@@ -8,7 +8,7 @@ export const MOCK_QUESTION: Question = {
 	title: '테스트 데이터',
 	contents: [
 		{
-			contentIdx: 51,
+			contentId: 51,
 			question: '다음 중 주어진 [Customer] 테이블을 참조하여 아래의 SQL문을 실행한 결과로 옳은 것은?',
 			questionBody: (
 				<VStack $gap="1.2rem">

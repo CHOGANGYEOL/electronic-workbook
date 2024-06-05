@@ -17,7 +17,6 @@ const rotate = keyframes`
 const Container = styled.div`
 	position: absolute;
 	inset: 0;
-	background-color: rgba(255, 255, 255, 0.6);
 	display: flex;
 	align-items: center;
 	justify-content: center;

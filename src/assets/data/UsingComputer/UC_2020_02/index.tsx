@@ -8,7 +8,7 @@ export const UC_2020_02: Question = {
 	title: '2020년 2회차',
 	contents: [
 		{
-			contentIdx: 1,
+			contentId: 1,
 			question: '다음 중 컴퓨터 및 정보기기에서 사용하는 펌웨어(Firmware)에 관한 설명으로 옳은 것은?',
 			answer: [
 				'주로 하드디스크의 부트 레코드 부분에 저장된다.',
@@ -19,7 +19,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 2,
+			contentId: 2,
 			question: '다음 중 수의 표현에 있어 진법에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'16진수(Hexadecimal)는 0∼9까지의 숫자와 A∼F까지 문자로 표현하는 진법으로 한 자리수를 표현하는데 4개의 비트가 필요하다.',
@@ -30,7 +30,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 3,
+			contentId: 3,
 			question: '다음 중 정보 보안을 위한 비밀키 암호화 기법의 설명으로 옳지 않은 것은?',
 			answer: [
 				'서로 다른 키로 데이터를 암호화하고 복호화 한다.',
@@ -41,7 +41,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 4,
+			contentId: 4,
 			question: '다음 중 시스템 보안을 위해 사용하는 방화벽(Firewall)에 대한 설명으로 적절하지 않은 것은?',
 			answer: [
 				'IP 주소 및 포트 번호를 이용하거나 사용자 인증을 기반으로 접속을 차단하여 네트워크의 출입로를 단일화 한다.',
@@ -52,7 +52,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 5,
+			contentId: 5,
 			question: '다음 중 Windows 운영체제에서의 백업과 복원에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'특정 날짜와 시간에 백업할 수 있도록 백업 주기를 예약할 수 있다.',
@@ -63,14 +63,14 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 6,
+			contentId: 6,
 			question:
 				'다음 중 스마트폰을 모뎀처럼 활용하는 방법으로, 컴퓨터나 노트북 등의 IT 기기를 스마트폰에 연결하여 무선 인터넷을 사용할 수 있게 하는 기능은?',
 			answer: ['와이파이(WiFi)', '블루투스(Bluetooth)', '테더링(Tethering)', '와이브로(WiBro)'],
 			correct: 3,
 		},
 		{
-			contentIdx: 7,
+			contentId: 7,
 			question: '다음 중 네트워크 관련 장비로 브리지(Bridge)에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'OSI 참조 모델의 데이터 링크 계층에 속한다.',
@@ -81,14 +81,14 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 8,
+			contentId: 8,
 			question:
 				'다음 중 인터넷 기반 기술을 이용하여 기업들이 외부 보안을 유지한 상태에서 협력 업체 간의 효율적인 업무 처리를 위해 사용하는 네트워크로 옳은 것은?',
 			answer: ['인트라넷(Intranet)', '원거리 통신망(WAN)', '엑스트라넷(Extranet)', '근거리 통신망(LAN)'],
 			correct: 3,
 		},
 		{
-			contentIdx: 9,
+			contentId: 9,
 			question: '다음 중 TCP/IP 프로토콜에서 IP 프로토콜의 개요 및 기능에 관한 설명으로 옳은 것은?',
 			answer: [
 				'메시지를 송/수신자의 주소와 정보로 묶어 패킷 단위로 나눈다.',
@@ -99,14 +99,14 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 10,
+			contentId: 10,
 			question:
 				'다음 중 디지털 콘텐츠의 생성·거래·전달·관리 등 전체 과정을 관리할 수 있는 기술로 멀티미디어 프레임 워크의 MPEG 표준은?',
 			answer: ['MPEG-1', 'MPEG-3', 'MPEG-7', 'MPEG-21'],
 			correct: 4,
 		},
 		{
-			contentIdx: 11,
+			contentId: 11,
 			question: '다음 중 GIF 파일 형식에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'인터넷 표준 그래픽 형식으로, 8비트 컬러를 사용하여 256색만 지원한다.',
@@ -117,7 +117,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 12,
+			contentId: 12,
 			question: '다음 중 Windows의 [제어판] - [장치 및 프린터]에 표시되지 않는 것은?',
 			answer: [
 				'사용자 컴퓨터',
@@ -128,7 +128,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 13,
+			contentId: 13,
 			question: '다음 중 컴퓨터의 제어장치에 있는 부호기(Encoder) 레지스터에 관한 설명으로 옳은 것은?',
 			answer: [
 				'명령 레지스터에 있는 명령어를 해독한다.',
@@ -139,7 +139,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 14,
+			contentId: 14,
 			question: '다음 중 Windows에서 바로 가기 아이콘에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'바로 가기 아이콘을 실행하면 연결된 원본 파일이 실행된다.',
@@ -150,7 +150,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 15,
+			contentId: 15,
 			question:
 				'다음 중 Windows에서 파일이나 폴더, 프린터, 드라이브 등 컴퓨터 자원의 공유에 관한 설명으로 옳지 않은 것은?',
 			answer: [
@@ -162,7 +162,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 16,
+			contentId: 16,
 			question: '다음 중 출력장치인 디스플레이 어댑터와 모니터에 관련된 용어의 설명으로 옳지 않은 것은?',
 			answer: [
 				'픽셀(Pixel): 화면을 이루는 최소 단위로서 같은 크기의 화면에서 픽셀 수가 많을수록 해상도가 높아진다.',
@@ -173,7 +173,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 17,
+			contentId: 17,
 			question: '다음 중 컴퓨터에서 사용하는 기억장치에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'플래시(Flash) 메모리는 비휘발성 기억장치로 주로 디지털 카메라나 MP3, 개인용 정보 단말기, USB 드라이브 등 휴대용 기기에서 대용량 정보를 저장하는 용도로 사용된다.',
@@ -184,7 +184,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 18,
+			contentId: 18,
 			question: '다음 중 패치(Patch) 버전 소프트웨어에 관한 설명으로 옳은 것은?',
 			answer: [
 				'정식으로 대가를 지불하고 사용하는 소프트웨어이다.',
@@ -195,7 +195,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 19,
+			contentId: 19,
 			question: '다음 중 컴퓨터에서 사용하는 압축 프로그램에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'압축한 파일을 모아 재압축을 반복하면 파일 크기를 계속 줄일 수 있다.',
@@ -206,7 +206,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 20,
+			contentId: 20,
 			question: '다음 중 Windows에서 바탕 화면의 바로 가기 메뉴에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'바탕 화면에서 <Shift> + <F10> 키를 누르면 바로 가기 메뉴가 표시된다.',
@@ -217,7 +217,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 21,
+			contentId: 21,
 			question: '다음 중 피벗 테이블에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'피벗 테이블 보고서를 작성한 후 원본 데이터를 수정하면 피벗 테이블 보고서에 자동으로 반영된다.',
@@ -228,7 +228,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 22,
+			contentId: 22,
 			question:
 				'아래 그림과 같이 설정한 상태에서 [매크로 기록] 대화 상자의 [확인] 단추를 누른다. [A2:A6] 범위를 선택한 후 글꼴 스타일을 굵게 지정하고 [기록 중지]를 눌러 ‘서식’ 매크로의 작성을 완료하였다. 다음 중 매크로 작성 후 [C1] 셀을 선택하고 ‘서식’ 매크로를 실행한 결과로 옳은 것은?',
 			questionBody: <img src={IMAGES.Img_22} />,
@@ -241,7 +241,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 23,
+			contentId: 23,
 			question: '다음 중 아래 그림과 같은 시나리오 요약 보고서에 대한 설명으로 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_23} />,
 			answer: [
@@ -253,7 +253,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 24,
+			contentId: 24,
 			question:
 				'다음 중 아래 시트에서 사원명이 두 글자이면서 실적이 전체 실적의 평균을 초과하는 데이터를 검색할 때, 고급 필터의 조건으로 옳은 것은?',
 			questionBody: <img src={IMAGES.Img_24} />,
@@ -302,7 +302,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 25,
+			contentId: 25,
 			question: '다음 중 데이터가 입력되어 있는 연속된 셀 범위를 선택하는 방법으로 옳지 않은 것은?',
 			answer: [
 				'첫 번째 셀을 클릭한 후 <Ctrl> + <Shift> + <방향키> 를 눌러 선택 영역을 확장한다.',
@@ -313,7 +313,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 26,
+			contentId: 26,
 			question: '다음 중 [외부 데이터 가져오기] 기능에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'텍스트 파일은 구분 기호나 일정한 너비로 분리된 모든 열을 엑셀로 가져오기 때문에 일부 열만 가져올 수는 없다.',
@@ -324,7 +324,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 27,
+			contentId: 27,
 			question: '다음 중 [찾기 및 바꾸기] 대화상자에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'찾을 내용에 ‘*수정*’, 바꿀 내용에 ‘*변경*’으로 입력하고, [모두 바꾸기] 단추를 클릭하면 ‘수정’이라는 모든 글자를 ‘*변경*’으로 바꾼다.',
@@ -335,7 +335,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 28,
+			contentId: 28,
 			question: '다음 중 엑셀에서 날짜 데이터의 입력 방법에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'날짜 데이터는 하이픈(-)이나 슬래시(/)를 이용하여 년, 월, 일을 구분한다.',
@@ -346,7 +346,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 29,
+			contentId: 29,
 			question: '다음 중 아래 차트에 대한 설명으로 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_29} />,
 			answer: [
@@ -358,7 +358,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 30,
+			contentId: 30,
 			question:
 				'다음 중 서식 코드를 셀의 사용자 지정 표시 형식으로 설정한 경우 입력 데이터와 표시 결과가 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_30} />,
@@ -366,7 +366,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 31,
+			contentId: 31,
 			question: '다음 중 매크로 편집 및 삭제에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'[매크로] 대화상자에서 편집할 매크로를 선택하고 [편집] 단추를 클릭하면 Visual Basic 편집기를 실행할 수 있다.',
@@ -377,7 +377,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 32,
+			contentId: 32,
 			question: '다음 중 아래의 워크시트에서 수식의 결과로 ‘부사장’을 출력하지 않는 것은?',
 			questionBody: <img src={IMAGES.Img_32} />,
 			answer: [
@@ -389,7 +389,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 33,
+			contentId: 33,
 			question: '다음 중 아래의 워크시트에서 작성한 수식으로 결과 값이 다른 것은?',
 			questionBody: <img src={IMAGES.Img_33} />,
 			answer: [
@@ -401,7 +401,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 34,
+			contentId: 34,
 			question: '다음 중 통합 문서에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'시트 보호는 통합 문서 전체가 아닌 특정 시트만을 보호한다.',
@@ -412,7 +412,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 35,
+			contentId: 35,
 			question:
 				'아래 시트에서 각 부서마다 직위별로 종합점수의 합계를 구하려고 한다. 다음 중 [B17] 셀에 입력된 수식으로 옳은 것은?',
 			questionBody: (
@@ -430,7 +430,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 36,
+			contentId: 36,
 			question: '다음 중 셀에 수식을 입력하는 방법에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'통합 문서의 여러 워크시트에 있는 동일한 셀 범위 데이터를 이용하려면 수식에서 3차원 참조를 사용한다.',
@@ -441,7 +441,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 37,
+			contentId: 37,
 			question: '다음 중 아래 그림 [보기]탭 [창]그룹의 각 명령에 대한 설명으로 옳지 않은 것은?',
 			questionBody: <img src={IMAGES.Img_37} />,
 			answer: [
@@ -453,7 +453,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 38,
+			contentId: 38,
 			question: '다음 중 엑셀의 상태 표시줄에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'상태 표시줄에서 워크시트의 보기 상태를 기본 보기, 페이지 레이아웃 보기, 페이지 나누기 미리 보기 중 선택하여 변경할 수 있다.',
@@ -464,7 +464,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 39,
+			contentId: 39,
 			question: '다음 중 차트의 편집에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'차트와 연결된 워크시트의 데이터에 열을 추가하면 차트에 자동적으로 반영되지 않는다.',
@@ -475,7 +475,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 40,
+			contentId: 40,
 			question: '다음 중 엑셀의 인쇄 기능에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'차트만 제외하고 인쇄하기 위해서는 [차트 영역 서식] 대화상자에서 ‘개체 인쇄’의 체크를 해제한다.',
@@ -486,7 +486,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 41,
+			contentId: 41,
 			question: '다음 중 관계형 데이터베이스 모델에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'도메인(Domain)은 하나의 애트리뷰트(Attribute)가 취할 수 있는 같은 타입의 원자값들의 집합이다.',
@@ -497,7 +497,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 42,
+			contentId: 42,
 			question: '다음 중 입력 마스크 설정에 사용하는 사용자 정의 입력 마스크 기호에 대한 설명으로 옳은 것은?',
 			answer: [
 				'9: 소문자로 변환',
@@ -508,14 +508,14 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 43,
+			contentId: 43,
 			question:
 				'다음 중 데이터를 입력 또는 삭제 시 이상(anomaly) 현상이 일어나지 않도록 데이터베이스를 설계하기 위한 기술을 의미하는 용어는?',
 			answer: ['자동화', '정규화', '순서화', '추상화'],
 			correct: 2,
 		},
 		{
-			contentIdx: 44,
+			contentId: 44,
 			question: '다음 중 [관계 편집] 대화 상자에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'관계를 구성하는 어느 한쪽의 테이블 또는 필드 및 쿼리를 변경할 수 있다.',
@@ -526,7 +526,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 45,
+			contentId: 45,
 			question: '다음 중 테이블의 필드 속성 설정 시 사용하는 인덱스에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'인덱스를 설정하면 레코드의 검색과 정렬 속도가 빨라진다.',
@@ -537,7 +537,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 46,
+			contentId: 46,
 			question: '다음 중 테이블의 [디자인 보기]에서 설정 가능한 작업에 해당하지 않는 것은?',
 			answer: [
 				'폼 필터를 적용하여 조건에 맞는 레코드만 표시할 수 있다.',
@@ -548,7 +548,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 47,
+			contentId: 47,
 			question:
 				'아래와 같이 관계가 설정된 데이터베이스에 [Customer] 테이블에는 고객번호가 1004인 레코드만 있고, [Artist] 테이블에는 작가이름이 CAT인 레코드만 있다. 다음 중 이 데이터베이스에서 실행 가능한 SQL 문은? (단, SQL문에 입력되는 데이터 형식은 모두 올바르다고 간주함)',
 			questionBody: <img src={IMAGES.Img_47} />,
@@ -561,7 +561,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 48,
+			contentId: 48,
 			question: '다음 중 주어진 [학생] 테이블을 참조하여 아래의 SQL 문을 실행한 결과로 옳은 것은?',
 			questionBody: (
 				<VStack $gap="1.2rem">
@@ -628,7 +628,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 49,
+			contentId: 49,
 			question:
 				"아래와 같이 조회할 고객의 최소 나이를 입력받아 검색하는 매개 변수 쿼리를 작성하려고 한다. 다음 중 'Age' 필드의 조건식으로 옳은 것은?",
 			questionBody: <img src={IMAGES.Img_49} />,
@@ -641,7 +641,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 50,
+			contentId: 50,
 			question: '다음 중 아래의 이벤트 프로시저에 대한 설명으로 옳지 않은 것은?',
 			questionBody: (
 				<RequestBody>
@@ -661,7 +661,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 51,
+			contentId: 51,
 			question: '다음 중 주어진 [Customer] 테이블을 참조하여 아래의 SQL문을 실행한 결과로 옳은 것은?',
 			questionBody: (
 				<VStack $gap="1.2rem">
@@ -677,7 +677,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 52,
+			contentId: 52,
 			question: '다음 중 보고서에서 ‘텍스트 상자’ 컨트롤의 속성 설정에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'‘상태 표시줄 텍스트’ 속성은 컨트롤을 선택했을 때 상태 표시줄에 표시할 메시지를 설정한다.',
@@ -688,7 +688,7 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 53,
+			contentId: 53,
 			question: '다음 중 보고서에서 [페이지 번호] 대화 상자를 이용한 페이지 번호 설정에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'첫 페이지에만 페이지 번호가 표시되거나 표시되지 않도록 설정할 수 있다.',
@@ -699,14 +699,14 @@ export const UC_2020_02: Question = {
 			correct: 2,
 		},
 		{
-			contentIdx: 54,
+			contentId: 54,
 			question:
 				'다음 중 서류봉투에 초대장을 넣어 발송하려는 경우 우편물에 사용할 수신자의 주소를 프린트하기에 가장 적합한 보고서는?',
 			answer: ['업무 문서 양식 보고서', '우편 엽서 보고서', '레이블 보고서', '크로스탭 보고서'],
 			correct: 3,
 		},
 		{
-			contentIdx: 55,
+			contentId: 55,
 			question: '다음 중 폼 작성에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'[폼 디자인 도구]의 [디자인] 탭에서 [컨트롤 마법사 사용] 여부를 선택할 수 있다.',
@@ -717,7 +717,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 56,
+			contentId: 56,
 			question: '다음 중 폼의 모달 속성에 관한 설명으로 옳지 않은 것은?',
 			answer: [
 				'폼이 열려 있는 경우 다른 화면을 선택할 수 있다.',
@@ -728,7 +728,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 57,
+			contentId: 57,
 			question: '다음 중 보고서에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'보고서에 포함할 필드가 모두 한 테이블에 있는 경우 해당 테이블을 레코드 원본으로 사용한다.',
@@ -739,7 +739,7 @@ export const UC_2020_02: Question = {
 			correct: 4,
 		},
 		{
-			contentIdx: 58,
+			contentId: 58,
 			question: '다음 중 분할 표시 폼에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'분할 표시 폼은 [만들기] 탭의 [폼] 그룹에서 [기타 폼] - [폼 분할]을 클릭하여 만들 수 있다.',
@@ -750,7 +750,7 @@ export const UC_2020_02: Question = {
 			correct: 3,
 		},
 		{
-			contentIdx: 59,
+			contentId: 59,
 			question: '다음 중 매크로 함수에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'FindRecord 함수는 필드, 컨트롤, 속성 등의 값을 설정한다.',
@@ -761,7 +761,7 @@ export const UC_2020_02: Question = {
 			correct: 1,
 		},
 		{
-			contentIdx: 60,
+			contentId: 60,
 			question: '다음 중 하위 폼에 대한 설명으로 옳지 않은 것은?',
 			answer: [
 				'기본 폼과 하위 폼을 연결할 필드의 데이터 형식은 같거나 호환되어야 한다.',

@@ -5,15 +5,19 @@ import { HEADER_HEIGHT } from './const';
 import { Button } from '../../components/Button';
 import { Icon } from '../../components/Common/Icon';
 import { ICON_ID } from '../../components/Common/Icon/types';
+import context from '../../context';
+import { resetPK } from '../../context/detailContext/action';
 
 const Header = () => {
 	const navigate = useNavigate();
+	const dispatch = context.detail.useDispatch();
 	return (
 		<Wrapper>
 			<Button
 				$buttonType="NONE"
 				onClick={() => {
 					navigate(-1);
+					dispatch(resetPK());
 				}}
 			>
 				<Icon iconID={ICON_ID.BTN_ROUND_BACK} $width="2.8rem" />
