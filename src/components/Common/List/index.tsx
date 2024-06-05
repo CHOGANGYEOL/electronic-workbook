@@ -13,13 +13,7 @@ interface ListProps<T> extends StyleProps {
 	renderItem: (item: T, idx: number) => React.ReactNode;
 }
 
-const List = <T extends object | string>({
-	items,
-	renderItem,
-	$hasBorder = true,
-	$listStyle = 'none',
-	$gap = '0.8rem',
-}: ListProps<T>) => {
+const List = <T,>({ items, renderItem, $hasBorder = true, $listStyle = 'none', $gap = '0.8rem' }: ListProps<T>) => {
 	return (
 		<Wrapper {...{ $hasBorder, $listStyle, $gap }}>
 			{items.map((item, idx) => (
