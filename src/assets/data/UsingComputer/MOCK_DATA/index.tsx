@@ -1,27 +1,25 @@
 import { VStack } from '../../../../components/Common';
 import RequestBody from '../../../../feature/Question/components/RequestBody';
 import { Question } from '../../types';
-import IMAGES from '../UC_2020_02/images';
+import IMAGES from '../UC_2020_01/images';
 
 export const MOCK_QUESTION: Question = {
 	questionId: 3,
 	title: '테스트 데이터',
 	contents: [
 		{
-			contentId: 51,
-			question: '다음 중 주어진 [Customer] 테이블을 참조하여 아래의 SQL문을 실행한 결과로 옳은 것은?',
+			contentId: 48,
+			question: '다음 중 아래 <학생> 테이블에 대한 SQL 문의 실행 결과로 옳은 것은?',
 			questionBody: (
 				<VStack $gap="1.2rem">
+					<img src={IMAGES.Img_48} />
 					<RequestBody>
-						SELECT Count(*)
-						<br />
-						FROM (SELECT Distinct City From Customer);
+						SELECT AVG([나이]) FROM 학생 WHERE 학년=&quot;SN&quot; GROUP BY 전공 HAVING COUNT(*) {'>'}= 2;
 					</RequestBody>
-					<img src={IMAGES.Img_51} />
 				</VStack>
 			),
-			answer: ['3', '5', '7', '9'],
-			correct: 2,
+			answer: ['21', '22', '23', '24'],
+			correct: 4,
 		},
 	],
 };
