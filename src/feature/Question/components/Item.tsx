@@ -30,7 +30,7 @@ const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) 
 		<VStack $gap="2.4rem">
 			<VStack $gap="1.2rem" $alignItems="flex-start">
 				<ItemHead>
-					<span>{content.contentIdx}.</span>
+					<span>{content.contentId}.</span>
 					<p>{content.question}</p>
 				</ItemHead>
 				{content.questionBody}
