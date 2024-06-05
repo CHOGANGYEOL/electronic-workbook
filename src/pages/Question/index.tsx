@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 
 import { HStack, VStack } from '../../components/Common';
 import Article from '../../components/Common/Article';
-import Title from '../../components/Common/Title';
 import context from '../../context';
 import ArticleTitle from '../../feature/Question/components/ArticleTitle';
 import Complete from '../../feature/Question/components/Complete';
@@ -12,41 +11,38 @@ import Progress from '../../feature/Question/components/Progress';
 import useQuestion from '../../feature/Question/useQuestion';
 
 const Question = () => {
-	const { question, data } = context.detail.useState();
+	const { question } = context.detail.useState();
 
 	const questionData = useQuestion(question);
 	const { count, isComplete, history } = questionData;
 
-	if (!question || !data) return <Navigate to={'/'} />;
+	if (!question) return <Navigate to={'/'} />;
 
 	return (
-		<VStack $gap="2.4rem" $flex="1">
-			<Title>{data.title}</Title>
-			<Article
-				$css={css`
-					flex: 1;
-				`}
-			>
-				<VStack $gap="2.4rem">
-					<ArticleTitle>
-						<HStack $justifyContent="space-between">
-							<Label>
-								{question.createAt}년 - {question.order.toString().padStart(2, '0')}회차
-							</Label>
-							{!isComplete ? (
-								<Progress total={question.contents.length} current={history.length} />
-							) : (
-								<Counter $justifyContent="flex-end" $gap="0.4rem">
-									점수 : <span className="count">{count}</span> /{' '}
-									<span className="total">{question.total ?? question.contents.length}</span>
-								</Counter>
-							)}
-						</HStack>
-					</ArticleTitle>
-					{!isComplete ? <Content {...{ questionData }} /> : <Complete {...{ history }} />}
-				</VStack>
-			</Article>
-		</VStack>
+		<Article
+			$css={css`
+				flex: 1;
+			`}
+		>
+			<VStack $gap="2.4rem">
+				<ArticleTitle>
+					<HStack $justifyContent="space-between">
+						<Label>
+							{question.createAt}년 - {question.order.toString().padStart(2, '0')}회차
+						</Label>
+						{!isComplete ? (
+							<Progress total={question.contents.length} current={history.length} />
+						) : (
+							<Counter $justifyContent="flex-end" $gap="0.4rem">
+								점수 : <span className="count">{count}</span> /{' '}
+								<span className="total">{question.total ?? question.contents.length}</span>
+							</Counter>
+						)}
+					</HStack>
+				</ArticleTitle>
+				{!isComplete ? <Content {...{ questionData }} /> : <Complete {...{ history }} />}
+			</VStack>
+		</Article>
 	);
 };
 

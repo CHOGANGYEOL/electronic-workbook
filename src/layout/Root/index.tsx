@@ -2,15 +2,18 @@ import { Outlet, useNavigation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Loading from '../../components/Common/Loading';
+import { EntireContextProvider } from '../../context';
 
 const Root = () => {
 	const { state } = useNavigation();
 	return (
 		<Container>
-			{state === 'loading' && <Loading />}
-			<section id="inner">
-				<Outlet />
-			</section>
+			<EntireContextProvider>
+				{state === 'loading' && <Loading />}
+				<section id="inner">
+					<Outlet />
+				</section>
+			</EntireContextProvider>
 		</Container>
 	);
 };
