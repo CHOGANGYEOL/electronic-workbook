@@ -27,9 +27,7 @@ const Question = () => {
 			<VStack $gap="2.4rem">
 				<ArticleTitle>
 					<HStack $justifyContent="space-between">
-						<Label>
-							{question.createAt}년 - {question.order.toString().padStart(2, '0')}회차
-						</Label>
+						<Label>{question.title}</Label>
 						{!isComplete ? (
 							<Progress total={question.contents.length} current={history.length} />
 						) : (

@@ -5,8 +5,7 @@ import { Question } from '../../types';
 
 export const UC_2020_01: Question = {
 	questionId: 1,
-	createAt: 2020,
-	order: 1,
+	title: '2020년 1회차',
 	contents: [
 		{
 			contentIdx: 1,

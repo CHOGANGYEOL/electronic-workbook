@@ -5,8 +5,7 @@ export const ALL_DATA: Data[] = [USING_COMPUTER];
 
 export const MOCK_QUESTION_DATA: Question = {
 	questionId: 1,
-	createAt: 2020,
-	order: 1,
+	title: '',
 	total: 60,
 	contents: [
 		{

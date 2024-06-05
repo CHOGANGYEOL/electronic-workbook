@@ -8,8 +8,7 @@ interface Data {
 
 interface Question {
 	questionId: number;
-	createAt: number; // 2020
-	order: number; // 회차 1
+	title: string; // 2020년 1회차
 	total?: number; // 토탈 점수 - 넣지 않을 시 contents length
 	contents: Content[];
 }

@@ -5,8 +5,7 @@ import IMAGES from '../UC_2020_02/images';
 
 export const MOCK_QUESTION: Question = {
 	questionId: 3,
-	createAt: 1000,
-	order: 1,
+	title: '테스트 데이터',
 	contents: [
 		{
 			contentIdx: 51,
