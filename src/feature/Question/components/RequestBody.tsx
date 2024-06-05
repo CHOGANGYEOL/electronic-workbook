@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-const RequestBody = () => {
-	return <Wrapper></Wrapper>;
+import { Children } from '../../../components/Common/types';
+
+const RequestBody = ({ children }: Children) => {
+	return <Wrapper>{children}</Wrapper>;
 };
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+	border: 1px solid ${({ theme }) => theme.colors.black};
+	${({ theme }) => theme.font.body[2]};
+	padding: 1rem;
+`;
 export default RequestBody;

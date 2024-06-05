@@ -1,7 +1,7 @@
 import { Data, Question } from './types';
-import { usingComputer } from './UsingComputer';
+import { USING_COMPUTER } from './UsingComputer';
 
-export const ALL_DATA: Data[] = [usingComputer];
+export const ALL_DATA: Data[] = [USING_COMPUTER];
 
 export const MOCK_QUESTION_DATA: Question = {
 	questionId: 1,

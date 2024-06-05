@@ -1,7 +1,9 @@
-import Images from './images';
+import IMAGES from './images';
+import { VStack } from '../../../../components/Common';
+import RequestBody from '../../../../feature/Question/components/RequestBody';
 import { Question } from '../../types';
 
-export const uc_2020_01: Question = {
+export const UC_2020_01: Question = {
 	questionId: 1,
 	createAt: 2020,
 	order: 1,
@@ -287,15 +289,15 @@ export const uc_2020_01: Question = {
 			answer: [
 				<table key={'content__01--01'}>
 					<tr>
-						<td>123.456</td>
-						<td>#.#</td>
+						<td>0</td>
+						<td>#</td>
 						<td></td>
 					</tr>
 				</table>,
 				<table key={'content__01--02'}>
 					<tr>
-						<td>0</td>
-						<td>#</td>
+						<td>123.456</td>
+						<td>#.#</td>
 						<td>123.5</td>
 					</tr>
 				</table>,
@@ -342,164 +344,364 @@ export const uc_2020_01: Question = {
 		{
 			contentIdx: 29,
 			question: '다음 중 아래 시트의 [A9] 셀에 수식 ‘=OFFSET(B3,-1,2)’을 입력한 경우 결과값은?',
-			questionBody: <img src={Images.Img_29} />,
+			questionBody: <img src={IMAGES.Img_29} />,
 			answer: ['윤혜주', '서울', '고양', '박태훈'],
 			correct: 4,
 		},
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 3,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 2,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 1,
-		// },
-		// {
-		// 	question: '',
-		// 	answer: [],
-		// 	correct: 4,
-		// },
+		{
+			contentIdx: 30,
+			question: '다음 중 [개발 도구] 탭의 [컨트롤] 그룹에 대한 설명으로 옳지 않는 것은?',
+			questionBody: <img src={IMAGES.Img_30} />,
+			answer: [
+				'컨트롤 종류에는 텍스트 상자, 목록 상자, 옵션 단추, 명령 단추 등이 있다.',
+				'ActiveX 컨트롤은 양식 컨트롤 보다 다양한 이벤트에 반응할 수 있지만, 양식 컨트롤보다 호환성은 낮다.',
+				'[디자인 모드] 상태에서는 양식 컨트롤과 ActiveX 컨트롤 모두 매크로 등 정해진 동작은 실행하지 않지만 컨트롤의 선택, 크기 조절, 이동 등의 작업을 할 수 있다.',
+				'양식 컨트롤의 ‘단추(양식 컨트롤)’를 클릭하거나 드래그 해서 추가하면 [매크로 지정] 대화상자가 자동으로 표시 된다.',
+			],
+			correct: 3,
+		},
+		{
+			contentIdx: 31,
+			question: '다음 중 아래의 프로시저가 실행된 후 [A1] 셀에 입력되는 값으로 옳은 것은?',
+			questionBody: (
+				<RequestBody>
+					Sub 예제( ) <br />
+					&nbsp;&nbsp;Test = 0 <br />
+					&nbsp;&nbsp;Do Until Test {'>'} 10 <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Test = Test + 1 <br />
+					&nbsp;&nbsp;Loop <br />
+					&nbsp;&nbsp;Range{'("'}A1{'")'}.Value = Test <br />
+					End Sub
+				</RequestBody>
+			),
+			answer: ['10', '11', '0', '55'],
+			correct: 2,
+		},
+		{
+			contentIdx: 32,
+			question: '다음 중 아래 시트에 대한 각 수식의 결과값이 나머지 셋과 다른 것은?',
+			answer: [
+				'=SMALL(A1:G1,{3})',
+				'=AVERAGE(SMALL(A1:G1,{1;2;3;4;5}))',
+				'=LARGE(A1:G1,{5})',
+				'=SMALL(A1:G1,COLUMN(D1))',
+			],
+			correct: 4,
+		},
+		{
+			contentIdx: 33,
+			question:
+				'아래 시트에서 주민등록번호의 여덟 번째 문자가 ‘1’ 또는 ‘3’이면 ‘남’, ‘2’ 또는 ‘4’이면 ‘여’로 성별 정보를 알 수 있다. 다음 중 성별을 계산하기 위한 [D2] 셀의 수식으로 옳지 않은 것은? (단, [F2:F5] 영역은 숫자 데이터임)',
+			questionBody: <img src={IMAGES.Img_33} />,
+			answer: [
+				'=IF(OR(MID(C2, 8, 1)="2", MID(C2, 8, 1)="4"), "여", "남")',
+				'=CHOOSE(VALUE(MID(C2, 8, 1)), "남", "여", "남", "여")',
+				'=VLOOKUP(VALUE(MID(C2, 8, 1)), $F$2:$G$5, 2, 0)',
+				'=IF(MOD(VALUE(MID(C2, 8, 1)), 2)=0, "남", "여")',
+			],
+			correct: 4,
+		},
+		{
+			contentIdx: 34,
+			question:
+				'아래 시트에서 국적별 영화 장르의 편수를 계산하기 위해 [B12] 셀에 작성해야 할 배열수식으로 옳지 않은 것은?',
+			questionBody: <img src={IMAGES.Img_34} />,
+			answer: [
+				'{=SUM(($D$2:$D$9=$A12) * ($E$2:$E$9=B$11))}',
+				'{=SUM(IF($D$2:$D$9=$A12, IF($E$2:$E$9=B$11, 1)))}',
+				'{=COUNT(($D$2:$D$9=$A12) * ($E$2:$E$9=B$11))}',
+				'{=COUNT(IF(($D$2:$D$9=$A12) * ($E$2:$E$9=B$11), 1))}',
+			],
+			correct: 3,
+		},
+		{
+			contentIdx: 35,
+			question: '다음 중 이름 상자에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'<Ctrl> 키를 누르고 여러 개의 셀을 선택한 경우 마지막 선택한 셀 주소가 표시된다.',
+				'셀이나 셀 범위에 이름을 정의해 놓은 경우 이름이 표시된다.',
+				'차트가 선택되어 있는 경우 차트의 종류가 표시된다.',
+				'수식을 작성 중인 경우 최근 사용한 함수 목록이 표시된다.',
+			],
+			correct: 3,
+		},
+		{
+			contentIdx: 36,
+			question: '다음 중 엑셀의 화면 확대/축소 작업에 관한 설명으로 옳지 않은 것은?',
+			answer: [
+				'문서의 확대/축소는 10%에서 400%까지 설정할 수 있다.',
+				'설정한 확대/축소 배율은 통합 문서의 모든 시트에 자동으로 적용된다.',
+				'화면의 확대/축소는 단지 화면에서 보이는 상태만을 확대/축소하는 것으로 인쇄 시 적용되지 않는다.',
+				'<Ctrl> 키를 누른 채 마우스의 스크롤을 위로 올리면 화면이 확대되고, 아래로 내리면 화면이 축소된다.',
+			],
+			correct: 2,
+		},
+		{
+			contentIdx: 37,
+			question: '다음 중 인쇄 기능에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'기본적으로 워크시트의 눈금선은 인쇄되지 않으나 인쇄되도록 설정할 수 있다.',
+				'[페이지 설정] 대화상자의 [시트] 탭에서 ‘간단하게 인쇄’를 선택하면 셀의 테두리를 포함하여 인쇄할 수 있다.',
+				'[인쇄 미리 보기 및 인쇄] 화면을 표시하는 단축키는 <Ctrl> + <F2> 이다.',
+				'[인쇄 미리 보기 및 인쇄]에서 ‘여백 표시’를 선택한 경우 마우스로 여백을 변경할 수 있다.',
+			],
+			correct: 2,
+		},
+		{
+			contentIdx: 38,
+			question: '다음 중 차트 도구의 [데이터 선택]에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'[차트 데이터 범위]에서 차트에 사용하는 데이터 전체의 범위를 수정할 수 있다.',
+				'[행/열 전환]을 클릭하여 가로 (항목) 축의 데이터 계열과 범례 항목(계열)을 바꿀 수 있다.',
+				'범례에서 표시되는 데이터 계열의 순서를 바꿀 수 없다.',
+				'데이터 범위 내에 숨겨진 행이나 열의 데이터도 차트에 표시할 수 있다.',
+			],
+			correct: 3,
+		},
+		{
+			contentIdx: 39,
+			question:
+				'다음 중 아래 데이터를 차트로 작성하여 사원별로 각 분기의 실적을 비교·분석하려는 경우 가장 비효율적인 차트는?',
+			questionBody: <img src={IMAGES.Img_39} />,
+			answer: ['누적 세로 막대형 차트', '표식이 있는 꺾은선형', '원형 대 가로 막대형', '묶은 가로 막대형'],
+			correct: 3,
+		},
+		{
+			contentIdx: 40,
+			question:
+				'다음 중 셀 영역을 선택한 후 상태 표시줄의 바로가기 메뉴인 [상태 표시줄 사용자 지정]에서 선택할 수 있는 자동 계산에 해당되지 않는 것은?',
+			answer: [
+				'선택한 영역 중 숫자 데이터가 입력된 셀의 수',
+				'선택한 영역 중 문자 데이터가 입력된 셀의 수',
+				'선택한 영역 중 데이터가 입력된 셀의 수',
+				'선택한 영역의 합계, 평균, 최소값, 최대값',
+			],
+			correct: 2,
+		},
+		{
+			contentIdx: 41,
+			question: '다음 중 Access 파일에 암호를 설정하는 방법으로 옳은 것은?',
+			answer: [
+				'[데이터베이스 압축 및 복구] 도구에서 파일 암호를 설정할 수 있다.',
+				'데이터베이스를 단독 사용 모드(단독으로 열기)로 열어야 파일 암호를 설정할 수 있다.',
+				'데이터베이스를 MDE 형식으로 저장한 후 파일을 열어야 파일 암호를 설정할 수 있다.',
+				'[Access 옵션] 창의 보안 센터에서 파일 암호를 설정할 수 있다.',
+			],
+			correct: 2,
+		},
+		{
+			contentIdx: 42,
+			question:
+				'다음 중 데이터 보안 및 회복, 무결성, 병행 수행 제어 등을 정의하는 데이터베이스 언어로 데이터베이스 관리자가 데이터 관리를 목적으로 주로 사용하는 언어는?',
+			answer: ['데이터 제어어(DCL)', '데이터 부속어(DSL)', '데이터 정의어(DDL)', '데이터 조작어(DML)'],
+			correct: 1,
+		},
+		{
+			contentIdx: 43,
+			question: '다음 중 SQL 질의에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'ORDER BY절 사용 시 정렬 방식을 별도로 지정하지 않으면 기본 값은 ‘DESC’로 적용된다.',
+				'GROUP BY절은 특정 필드를 기준으로 그룹화 하여 검색할 때 사용한다.',
+				'FROM절에는 테이블 또는 쿼리 이름을 지정하며, WHERE절에는 조건을 지정한다.',
+				'SELECT DISTINCT문을 사용하면 중복 레코드를 제거할 수 있다.',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 44,
+			question: '다음 중 보고서의 그룹화 및 정렬에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'‘그룹’은 머리글과 같은 소계 및 요약 정보와 함께 표시되는 레코드의 모음으로 그룹 머리글, 세부 레코드 및 그룹 바닥글로 구성된다.',
+				'그룹화 할 필드가 날짜 데이터이면 전체 값(기본), 일, 주, 월, 분기, 연도 중 선택한 기준으로 그룹화할 수 있다.',
+				'Sum 함수를 사용하는 계산 컨트롤을 그룹 머리글에 추가하면 현재 그룹에 대한 합계를 표시할 수 있다.',
+				'필드나 식을 기준으로 최대 5단계까지 그룹화할 수 있으며, 같은 필드나 식은 한 번씩만 그룹화할 수 있다.',
+			],
+			correct: 4,
+		},
+		{
+			contentIdx: 45,
+			question:
+				'다음 중 보고서 작업 시 필드 목록 창에서 선택한 필드를 본문 영역에 추가할 때 자동으로 생성되는 컨트롤은?',
+			answer: ['단추', '텍스트 상자', '하이퍼링크', '언바운드 개체 틀'],
+			correct: 2,
+		},
+		{
+			contentIdx: 46,
+			question: '다음 중 보고서의 보기 형태에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'[보고서 보기]는 출력되는 보고서를 화면 출력용으로 보여주며 페이지를 구분하여 표시한다.',
+				'[디자인 보기]에서는 보고서에 삽입된 컨트롤의 속성, 맞춤, 위치 등을 설정할 수 있다.',
+				'[레이아웃 보기]는 출력될 보고서의 레이아웃을 보여주며 컨트롤의 크기 및 위치를 변경할 수도 있다.',
+				'[인쇄 미리 보기]에서는 종이에 출력되는 모양을 표시하며 인쇄를 위한 페이지 설정이 용이하다.',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 47,
+			question: '다음 중 아래 보고서에 대한 설명으로 옳지 않은 것은?',
+			questionBody: <img src={IMAGES.Img_47} />,
+			answer: [
+				'‘모델명’ 필드를 기준으로 그룹이 설정되어 있다.',
+				'‘모델명’ 필드에는 ‘중복 내용 숨기기’ 속성을 ‘예’로 설정하였다.',
+				'지점별 소계가 표시된 텍스트 상자는 그룹 바닥글에 삽입하였다.',
+				'순번은 컨트롤 원본을 ‘=1’로 입력한 후 ‘누적 합계’ 속성을 ‘그룹’으로 설정하였다.',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 48,
+			question: '다음 중 아래 <학생> 테이블에 대한 SQL 문의 실행 결과로 옳은 것은?',
+			questionBody: (
+				<VStack $gap="1.2rem">
+					<img src={IMAGES.Img_48} />
+					<RequestBody>
+						SELECT AVG([나이]) FROM 학생 WHERE 학년=&quot;SN&quot; GROUP BY 전공 HAVING COUNT(*) {'>'}= 2;
+					</RequestBody>
+				</VStack>
+			),
+			answer: ['21', '22', '23', '24'],
+			correct: 4,
+		},
+		{
+			contentIdx: 49,
+			question: '다음 중 선택 쿼리에서 사용자가 지정한 패턴과 일치하는 데이터를 찾고자 할 때 사용되는 연산자는?',
+			answer: ['Match', 'Some', 'Like', 'Any'],
+			correct: 3,
+		},
+		{
+			contentIdx: 50,
+			question:
+				'다음 중 아래 SQL문으로 생성된 테이블에서의 레코드 작업에 대한 설명으로 옳지 않은 것은? (단, 고객과 계좌 간의 관계는 1:M이다.)',
+
+			questionBody: (
+				<RequestBody>
+					CREATE TABLE 고객
+					<br />
+					&nbsp;&nbsp;(고객ID CHAR(20) NOT NULL,
+					<br />
+					&nbsp;&nbsp;고객명 CHAR(20) NOT NULL, <br />
+					&nbsp;&nbsp;연락번호 CHAR(12),
+					<br />
+					&nbsp;&nbsp;PRIMARY KEY (고객ID)
+					<br />
+					&nbsp;&nbsp;);
+					<br />
+					CREATE TABLE 계좌
+					<br />
+					&nbsp;&nbsp;(계좌번호 CHAR(10) NOT NULL, <br />
+					&nbsp;&nbsp;고객ID CHAR(20) NOT NULL, <br />
+					&nbsp;&nbsp;잔액 INTEGER DEFAULT 0, <br />
+					&nbsp;&nbsp;PRIMARY KEY (계좌번호),
+					<br />
+					&nbsp;&nbsp;FOREIGN KEY (고객ID) REFERENCES 고객 <br />
+					&nbsp;&nbsp;);
+				</RequestBody>
+			),
+			answer: [
+				'<고객> 테이블에서 ‘고객ID’ 필드는 동일한 값을 입력할 수 없다.',
+				'<계좌> 테이블에서 ‘계좌번호’ 필드는 반드시 입력해야 한다.',
+				'<고객> 테이블에서 ‘연락번호’ 필드는 원하는 값으로 수정하거나 생략할 수 있다.',
+				'<계좌> 테이블에서 ‘고객ID’ 필드는 동일한 값을 입력할 수 없다.',
+			],
+			correct: 4,
+		},
+		{
+			contentIdx: 51,
+			question: '다음 중 테이블에서 입력 마스크를 “LA09?”로 설정한 경우 입력할 수 없는 값은?',
+			answer: ['AA111', 'A11', 'AA11', 'A111A'],
+			correct: 1,
+		},
+		{
+			contentIdx: 52,
+			question: '다음 중 아래 <고객>과 <구매리스트> 테이블 관계에 참조 무결성이 항상 유지되도록 설정할 수 없는 경우는?',
+			questionBody: <img src={IMAGES.Img_52} />,
+			answer: [
+				'<고객> 테이블의 ‘고객번호’ 필드 값이 <구매리스트> 테이블의 ‘고객번호’ 필드에 없는 경우',
+				'<고객> 테이블의 ‘고객번호’ 필드 값이 <구매리스트> 테이블의 ‘고객번호’ 필드에 하나만 있는 경우',
+				'<구매리스트> 테이블의 ‘고객번호’ 필드 값이 <고객> 테이블의 ‘고객번호’ 필드에 없는 경우',
+				'<고객> 테이블의 ‘고객번호’ 필드 값이 <구매리스트> 테이블의 ‘고객번호’ 필드에 두 개 이상 있는 경우',
+			],
+			correct: 3,
+		},
+		{
+			contentIdx: 53,
+			question: '다음 중 외부 데이터 가져오기 기능에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'텍스트 파일을 가져와 기존 테이블의 레코드로 추가하려는 경우 기본 키에 해당하는 필드의 값들이 고유한 값이 되도록 데이터를 수정하며 가져올 수 있다.',
+				'Excel 워크시트에서 정의된 이름의 영역을 Access의 새 테이블이나 기존 테이블에 데이터 복사본으로 만들 수 있다.',
+				'Access에서는 한 테이블에 256개 이상의 필드를 지원하지 않으므로 원본 데이터는 열의 개수가 255개를 초과하지 않아야 한다.',
+				'Excel 파일을 가져오는 경우 한 번에 하나의 워크시트만 가져올 수 있으므로 여러 워크시트에서 데이터를 가져오려면 각 워크시트에 대해 가져오기 명령을 반복해야 한다.',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 54,
+			question:
+				'다음 중 위쪽 구역에 데이터시트를 표시하는 열 형식의 폼을 만들고, 아래쪽 구역에 선택한 레코드에 대한 정보를 수정하거나 입력할 수 있는 데이터시트 형식의 폼을 자동으로 만들어 주는 도구는?',
+			answer: ['폼', '폼 분할', '여러 항목', '폼 디자인'],
+			correct: 2,
+		},
+		{
+			contentIdx: 55,
+			question: '다음 중 이벤트 프로시저에서 쿼리를 실행 모드로 여는 명령은?',
+			answer: ['DoCmd.OpenQuery', 'DoCmd.SetQuery', 'DoCmd.QueryView', 'DoCmd.QueryTable'],
+			correct: 1,
+		},
+		{
+			contentIdx: 56,
+			question: '다음 중 폼의 구성 요소에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'폼 머리글은 인쇄할 때 모든 페이지의 상단에 매번 표시된다.',
+				'하위 폼은 폼 안에 있는 또 하나의 폼을 의미한다.',
+				'폼 바닥글은 폼 요약 정보 등과 같이 각 레코드에 동일하게 표시될 정보가 입력되는 구역이다.',
+				'본문은 사용할 실제 내용을 입력하는 구역으로 폼 보기 형식에 따라 하나의 레코드만 표시하거나 여러 개의 레코드를 표시한다.',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 57,
+			question: '다음 중 폼 작성에 관한 설명으로 옳지 않은 것은?',
+			answer: [
+				'여러 개의 컨트롤을 선택하여 자동 정렬할 수 있다.',
+				'컨트롤의 탭 순서는 자동으로 화면 위에서 아래로 설정된다.',
+				'사각형, 선 등의 도형 컨트롤을 삽입할 수 있다.',
+				'컨트롤 마법사를 사용하여 폼을 닫는 매크로를 실행시키는 단추를 만들 수 있다.',
+			],
+			correct: 2,
+		},
+		{
+			contentIdx: 58,
+			question: '다음 중 관계형 데이터베이스의 조인(JOIN)에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'쿼리에 여러 테이블을 포함할 때는 조인을 사용하여 원하는 결과를 얻을 수 있다.',
+				'내부 조인은 조인되는 두 테이블에서 조인하는 필드가 일치하는 행만을 반환하려는 경우에 사용한다.',
+				'외부 조인은 조인되는 두 테이블에서 공통 값이 없는 데이터를 포함할지 여부를 지정할 수 있다.',
+				'조인에 사용되는 기준 필드의 데이터 형식은 다르거나 호환되지 않아도 가능하다.',
+			],
+			correct: 4,
+		},
+		{
+			contentIdx: 59,
+			question:
+				'다음 중 폼 바닥글의 텍스트 상자의 컨트롤 원본으로 <사원> 테이블에서 직급이 ‘부장’인 레코드들의 급여 평균을 구하는 함수식으로 옳은 것은?',
+			answer: [
+				'=DAVG(“[급여]”, “[사원]”, “[직급]=‘부장’”)',
+				'=DAVG(“[사원]”, “[급여]”, “[직급]=‘부장’”)',
+				'=AVG(“[급여]”, “[사원]”, “[직급]=‘부장’”)',
+				'=AVG(“[사원]”, “[급여]”, “[직급]=‘부장’”)',
+			],
+			correct: 1,
+		},
+		{
+			contentIdx: 60,
+			question: '다음 중 액세스의 매크로에 대한 설명으로 옳지 않은 것은?',
+			answer: [
+				'반복적으로 수행되는 작업을 자동화하여 간단히 처리할 수 있도록 하는 기능이다.',
+				'매크로 함수 또는 매크로 함수 집합으로 구성되며, 각 매크로 함수의 수행 방식을 제어하는 인수를 추가할 수 있다.',
+				'매크로를 이용하여 폼을 열고 닫거나 메시지 박스를 표시할 수도 있다.',
+				'매크로는 주로 컨트롤의 이벤트에 연결하여 사용하며, 폼 개체 내에서만 사용할 수 있다.',
+			],
+			correct: 4,
+		},
 	],
-};
+} as const;

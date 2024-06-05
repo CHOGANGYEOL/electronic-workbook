@@ -8,4 +8,4 @@ import Img_47 from './47.jpg';
 import Img_48 from './48.jpg';
 import Img_52 from './52.jpg';
 
-export default { Img_29, Img_30, Img_32, Img_33, Img_34, Img_52, Img_39, Img_47, Img_48 };
+export default { Img_29, Img_30, Img_32, Img_33, Img_34, Img_52, Img_39, Img_47, Img_48 } as const;
