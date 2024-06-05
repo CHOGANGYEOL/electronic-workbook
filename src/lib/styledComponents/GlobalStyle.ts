@@ -26,7 +26,13 @@ button {
     cursor: default;
   }
 }
-
+table, th, td {
+  border:1px solid ${({ theme }) => theme.colors.black};
+  border-collapse: collapse;
+}
+th, td {
+  padding:0.4rem;
+}
 
 a {
     text-decoration: none;

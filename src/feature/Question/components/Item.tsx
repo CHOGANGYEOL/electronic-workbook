@@ -1,7 +1,9 @@
+import React from 'react';
+
 import styled, { css } from 'styled-components';
 
 import { Content } from '../../../assets/data/types';
-import { HStack, VStack } from '../../../components/Common';
+import { VStack } from '../../../components/Common';
 import List from '../../../components/Common/List';
 
 interface StyleProps {
@@ -11,7 +13,7 @@ interface StyleProps {
 	$readonly: boolean;
 }
 
-type ConditionFunction = (item: string, idx: number) => boolean;
+type ConditionFunction = (item: React.ReactNode, idx: number) => boolean;
 
 interface ItemProps {
 	readonly?: boolean;
@@ -21,18 +23,18 @@ interface ItemProps {
 		correct: ConditionFunction;
 		wrong: ConditionFunction;
 	};
-	onItemClick?: (item: string, idx: number) => void;
+	onItemClick?: (item: React.ReactNode, idx: number) => void;
 }
 const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) => {
 	return (
 		<VStack $gap="2.4rem">
-			<HStack $gap="1.2rem">
+			<VStack $gap="1.2rem">
 				<ItemHead>
 					<span>{content.contentIdx}.</span>
 					<p>{content.question}</p>
 				</ItemHead>
 				{content.questionBody}
-			</HStack>
+			</VStack>
 			<List
 				$hasBorder={false}
 				items={content.answer}
@@ -64,7 +66,7 @@ const ItemHead = styled.h5`
 	}
 `;
 
-const ListItem = styled.p<StyleProps>`
+const ListItem = styled.div<StyleProps>`
 	${({ theme }) => theme.font.body[2]}
 	${({ $isActive }) =>
 		$isActive &&
