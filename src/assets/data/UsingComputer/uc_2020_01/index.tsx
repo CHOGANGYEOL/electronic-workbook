@@ -704,4 +704,4 @@ export const UC_2020_01: Question = {
 			correct: 4,
 		},
 	],
-} as const;
+};

@@ -28,7 +28,7 @@ interface ItemProps {
 const Item = ({ content, condition, onItemClick, readonly = false }: ItemProps) => {
 	return (
 		<VStack $gap="2.4rem">
-			<VStack $gap="1.2rem">
+			<VStack $gap="1.2rem" $alignItems="flex-start">
 				<ItemHead>
 					<span>{content.contentIdx}.</span>
 					<p>{content.question}</p>
