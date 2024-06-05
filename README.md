@@ -12,9 +12,10 @@
 
 - package
   - pnpm
+    - 효율적인 디스크 사용을 위해 채택
 - library
   - vite
-    - 프로젝트 building용으로 사용 ESModule을 이용해 빠른 HMR을 지원하기 떄문에 채용
+    - 프로젝트 building용으로 사용 ESModule을 이용해 빠른 HMR을 지원하기 떄문에 채택
     - TDD로 진행하지 않기때문에 create-react-app의 필요성을 느끼지 못했으며, 기본 구조 자체가 lite해지는 장점을 봄
   - react
   - typescript
@@ -22,7 +23,7 @@
   - react-toastify
   - styled-components
   - gh-pages
-    - 쉬운 github page 배포를 위해 채용
+    - 쉬운 github page 배포를 위해 채택
   - eslint
   - prettier
 
