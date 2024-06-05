@@ -1,14 +1,9 @@
-import { useEffect } from 'react';
-
-import { useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import styled, { css } from 'styled-components';
 
 import { HStack, VStack } from '../../components/Common';
 import Article from '../../components/Common/Article';
 import Loading from '../../components/Common/Loading';
 import context from '../../context';
-import { setQuestionId } from '../../context/detailContext/action';
 import ArticleTitle from '../../feature/Question/components/ArticleTitle';
 import Complete from '../../feature/Question/components/Complete';
 import Content from '../../feature/Question/components/Content';
@@ -16,19 +11,6 @@ import Progress from '../../feature/Question/components/Progress';
 import useQuestion from '../../feature/Question/useQuestion';
 
 const Question = () => {
-	const { questionId } = useParams();
-	const dispatch = context.detail.useDispatch();
-	const navigate = useNavigate();
-
-	useEffect(() => {
-		if (questionId) {
-			dispatch(setQuestionId(Number(questionId)));
-		} else {
-			toast.error('잘못된 URL입니다.');
-			navigate(-1);
-		}
-	}, [questionId]);
-
 	const { question } = context.detail.useState();
 
 	const questionData = useQuestion(question);

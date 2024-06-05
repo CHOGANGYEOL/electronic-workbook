@@ -6,7 +6,7 @@ import { Button } from '../../components/Button';
 import { Icon } from '../../components/Common/Icon';
 import { ICON_ID } from '../../components/Common/Icon/types';
 import context from '../../context';
-import { resetPK } from '../../context/detailContext/action';
+import { resetState } from '../../context/detailContext/action';
 
 const Header = () => {
 	const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Header = () => {
 				$buttonType="NONE"
 				onClick={() => {
 					navigate(-1);
-					dispatch(resetPK());
+					dispatch(resetState());
 				}}
 			>
 				<Icon iconID={ICON_ID.BTN_ROUND_BACK} $width="2.8rem" />

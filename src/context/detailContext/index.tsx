@@ -1,6 +1,6 @@
 import { Dispatch, createContext, useContext, useMemo, useReducer } from 'react';
 
-import { RESET_PK, SET_KEY, SET_QUESTION_ID, resetPK, setKey, setQuestionId } from './action';
+import { RESET_STATE, SET_STATE, resetState, setState } from './action';
 import { ALL_DATA } from '../../assets/data';
 import { Content, Data, Question } from '../../assets/data/types';
 import { Children } from '../../components/Common/types';
@@ -11,7 +11,7 @@ interface DetailContextValue {
 	content?: Content;
 }
 
-interface State {
+export interface State {
 	key: string | null;
 	questionId: number | null;
 }
@@ -20,22 +20,13 @@ const initialState: State = {
 	questionId: null,
 };
 
-type Action = ReturnType<typeof setKey> | ReturnType<typeof setQuestionId> | ReturnType<typeof resetPK>;
+type Action = ReturnType<typeof setState> | ReturnType<typeof resetState>;
 type DispatchAction = Dispatch<Action>;
-const reducer = (state: State, action: Action): State => {
+const reducer = (_: State, action: Action): State => {
 	switch (action.type) {
-		case SET_KEY:
-			return {
-				...state,
-				key: (action as ReturnType<typeof setKey>).key,
-			};
-
-		case SET_QUESTION_ID:
-			return {
-				...state,
-				questionId: (action as ReturnType<typeof setQuestionId>).questionId,
-			};
-		case RESET_PK:
+		case SET_STATE:
+			return (action as ReturnType<typeof setState>).state;
+		case RESET_STATE:
 			return initialState;
 		default:
 			throw new Error('Unhandled action');
