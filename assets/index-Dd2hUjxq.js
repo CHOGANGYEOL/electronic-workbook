@@ -372,54 +372,54 @@ Error generating stack: `+i.message+`
 		}
 	}
 `,LS=Em`
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size:62.5%;
-}
-body {
-  margin: 0;
-  font-size: 1.6rem;
-  ${TS()}
-  font-family: "Noto Sans KR", sans-serif;
-}
-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  &:disabled {
-    cursor: default;
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
-}
-table, th, td {
-  border:1px solid ${({theme:e})=>e.colors.black};
-  border-collapse: collapse;
-}
-th, td {
-  padding:0.4rem;
-}
+  html {
+    font-size:62.5%;
+  }
+  body {
+    margin: 0;
+    font-size: 1.6rem;
+    ${TS()}
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:disabled {
+      cursor: default;
+    }
+  }
+  table, th, td {
+    border:1px solid ${({theme:e})=>e.colors.black};
+    border-collapse: collapse;
+  }
+  th, td {
+    padding:0.4rem;
+  }
 
-a {
-    text-decoration: none;
-    color: ${({theme:e})=>e.colors.black}
-}
-a, button  {
-  outline:none;
-}
-    input,textarea {
-        outline: none;
-        caret-color: ${({theme:e})=>e.colors.primary[600]};
-        ::placeholder {
-            color: ${({theme:e})=>e.colors.gray[600]};
-        }
-    }
-    img {
-      max-width: 100%;
-    }
-${DS}
+  a {
+      text-decoration: none;
+      color: ${({theme:e})=>e.colors.black}
+  }
+  a, button  {
+    outline:none;
+  }
+  input,textarea {
+      outline: none;
+      caret-color: ${({theme:e})=>e.colors.primary[600]};
+      ::placeholder {
+          color: ${({theme:e})=>e.colors.gray[600]};
+      }
+  }
+  img {
+    max-width: 100%;
+  }
+  ${DS}
 `;Em`
   html {
     overflow: hidden;
