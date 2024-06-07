@@ -4,7 +4,7 @@ import { Question } from '../../types';
 import IMAGES from '../UC_2020_01/images';
 
 export const MOCK_QUESTION: Question = {
-	questionId: 3,
+	questionId: 1,
 	title: '테스트 데이터',
 	contents: [
 		{

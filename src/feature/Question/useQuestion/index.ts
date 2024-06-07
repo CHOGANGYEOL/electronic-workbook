@@ -20,6 +20,10 @@ const useQuestion = (question?: Question) => {
 	// 선택한 정답 idx
 	const [selectIdx, setSelectIdx] = useState<number | null>(null);
 
+	const handleSelectIdx = useCallback((idx: number) => {
+		setSelectIdx((prev) => (prev === idx ? null : idx));
+	}, []);
+
 	// 마지막 문제인지 여부
 	const isLast = useMemo(() => question && question.contents.length - 1 === currentIdx, [question, currentIdx]);
 
@@ -31,6 +35,13 @@ const useQuestion = (question?: Question) => {
 	// 시험 종료 함수
 	const handleClose = useCallback(() => {
 		setComplete(true);
+	}, []);
+
+	// 해설보기 open
+	const [isDescOpen, setDescOpen] = useState(false);
+
+	const handleDescOpen = useCallback(() => {
+		setDescOpen((prev) => !prev);
 	}, []);
 
 	// 선택 후 다음 || 확인 버튼 클릭시
@@ -49,6 +60,7 @@ const useQuestion = (question?: Question) => {
 		} finally {
 			setConfirm(false);
 			setSelectIdx(null);
+			setDescOpen(false);
 		}
 	}, [content, selectIdx]);
 
@@ -66,11 +78,13 @@ const useQuestion = (question?: Question) => {
 		isLast,
 		currentIdx,
 		selectIdx,
-		setSelectIdx,
+		handleSelectIdx,
 		handleConfirm,
 		isConfirm,
 		isComplete,
 		handleClose,
+		isDescOpen,
+		handleDescOpen,
 	};
 };
 export default useQuestion;

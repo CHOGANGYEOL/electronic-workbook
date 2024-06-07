@@ -20,6 +20,7 @@ interface Content {
 	answer: React.ReactNode[]; // 문제 리스트
 	correct: number; // 정답 번호
 	score?: number; // 배당 점수 - 넣지 않을 시 기본 1점
+	description?: React.ReactNode; // 해설
 }
 
 export type { Data, Question, Content };

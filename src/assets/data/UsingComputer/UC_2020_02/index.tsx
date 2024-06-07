@@ -4,7 +4,7 @@ import RequestBody from '../../../../feature/Question/components/RequestBody';
 import { Question } from '../../types';
 
 export const UC_2020_02: Question = {
-	questionId: 2,
+	questionId: 202002,
 	title: '2020년 2회차',
 	contents: [
 		{
