@@ -12,7 +12,8 @@ interface CompleteProps {
 	history: QuestionHistoryList;
 }
 const Complete = ({ history }: CompleteProps) => {
-	const [isWrong, setWrong] = useState(false);
+	// 틀린문제만 보기 여부 기본값 - true
+	const [isWrong, setWrong] = useState(true);
 	const wrongData = useMemo(() => history.filter((data) => data.selectCorrect !== data.correct), [history]);
 
 	const dataList = useMemo(() => (isWrong ? wrongData : history), [isWrong]);
