@@ -1,8 +1,9 @@
-import { FormEvent, useCallback } from 'react';
+import React, { FormEvent, useCallback } from 'react';
 
 import styled from 'styled-components';
 
 import Item from './Item';
+import RequestBody from './RequestBody';
 import { Button } from '../../../components/Button';
 import { HStack, VStack } from '../../../components/Common';
 import Divide from '../../../components/Common/Divide';
@@ -77,16 +78,26 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 						{isLast ? '결과' : '다음'}
 					</Button>
 				</HStack>
-				<Divide />
-				<Button
-					$buttonType="LINE"
-					onClick={() => {
-						handleDescOpen();
-					}}
-				>
-					{isDescOpen ? '해설 끄기' : '해설 보기'}
-				</Button>
-				{isDescOpen && content.description}
+				{!!content.description && (
+					<React.Fragment>
+						<Divide />
+						<Button
+							$buttonType="LINE"
+							$color="SECONDARY"
+							onClick={() => {
+								handleDescOpen();
+							}}
+						>
+							{isDescOpen ? '해설 끄기' : '해설 보기'}
+						</Button>
+						{isDescOpen && (
+							<RequestBody>
+								<h4>[해설]</h4>
+								{content.description}
+							</RequestBody>
+						)}
+					</React.Fragment>
+				)}
 			</VStack>
 		</Form>
 	);
