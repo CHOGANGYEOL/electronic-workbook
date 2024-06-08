@@ -407,46 +407,201 @@ export const UC_2024_03: Question = {
 				'[B3] 셀을 클릭하고 매크로를 실행한 후의 [C3] 셀의 값은 ‘성적현황’이다.',
 			],
 			correct: 3,
-			description:
-				"[해설]\n• 매크로의 가장 마지막에 있는 ‘Range(“A3”).Select’로 인해 현재 셀 포인터의 위치에 상관없이 매크로를 실행하면 셀 포인터는 [A3] 셀에 놓입니다.\n• [B3] 셀을 클릭하고 매크로를 실행하면 다음과 같이 실행됩니다.\n• 매크로 코드의 의미는 다음과 같습니다.\nSub 매크로2( )\n❶ ' 매크로2 매크로\n'\n❷ ActiveCell.Offset(0, 1).Range(“A1”).Select ❸ ActiveCell.FormulaR1C1 = “성적현황”\n❹ ActiveCell.Offset(1, -1).Range(“A1”).Select ❺ ActiveCell.FormulaR1C1 = “학번”\n❻ ActiveCell.Offset(0, 1).Range(“A1”).Select ❼ ActiveCell.FormulaR1C1 = “학과”\n❽ Range(\"C2\").Select\n❾ ActiveCell.FormulaR1C1 = “이름”\n❿ Range(“A3”).Select End Sub\n❶ 작은따옴표(')가 있는 문장은 프로그램을 설명하는 주석문으로, 실행되지 않습니다. 매크로 이름이 ‘매크로2’임을 알 수 있습니다.\n❷ 활성화된 셀에서 아래쪽으로 0칸, 오른쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번째 행(1)을 선택합니다.\n• Offset : 지정된 범위에서 떨어진 범위\n• Range(“A1”) : [A1] 셀을 의미하는 것이 아니라 첫 번째 열(A), 첫 번째 행(1)을 의미합니다.\n‘Range(“A2”)’로 지정하면 첫 번째 열(A), 두 번째 행(2)을 의미합니다. ※ ‘ActiveCell.Offset(0, 1).Select’로 작성해도 결과는 동일합니다.\n❸ 활성화된 셀에 성적현황을 입력합니다.\n❹ 활성화된 셀에서 아래쪽으로 1칸, 왼쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번째 행(1)을 선택합니다.\n❺ 활성화된 셀에 학번을 입력합니다.\n❻ 활성화된 셀에서 아래쪽으로 0칸, 오른쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번째 행(1)을 선택합니다.\n❼ 활성화된 셀에 학과를 입력합니다. ❽ [C2] 셀을 선택합니다.\n❾ 활성화된 셀에 이름을 입력합니다. ❿ [A3] 셀을 선택합니다.",
+			description: (
+				<VStack>
+					<ul>
+						<li>
+							매크로의 가장 마지막에 있는 ‘Range(“A3”).Select’로 인해 현재 셀 포인터의 위치에 상관없이 매크 로를
+							실행하면 셀 포인터는 [A3] 셀에 놓입니다.
+						</li>
+						<li>
+							[B3] 셀을 클릭하고 매크로를 실행하면 다음과 같이 실행됩니다.
+							<br />
+							<img src={IMAGES.Img_7_2} />
+						</li>
+						<li>매크로 코드의 의미는 다음과 같습니다.</li>
+					</ul>
+					<RequestBody>
+						<ol>
+							Sub 매크로2( )<li>&apos; 매크로2 매크로 &apos;</li>
+							<li>ActiveCell.Offset(0, 1).Range(“A1”).Select </li>
+							<li>ActiveCell.FormulaR1C1 = “성적현황”</li>
+							<li>ActiveCell.Offset(1, -1).Range(“A1”).Select </li>
+							<li>ActiveCell.FormulaR1C1 = “학번”</li>
+							<li>ActiveCell.Offset(0, 1).Range(“A1”).Select </li>
+							<li>ActiveCell.FormulaR1C1 = “학과”</li>
+							<li>Range(&quot;C2&quot;).Select</li>
+							<li>ActiveCell.FormulaR1C1 = “이름”</li>
+							<li>Range(“A3”).Select </li>
+						</ol>
+						End Sub
+					</RequestBody>
+					<ol>
+						<li>
+							작은따옴표(&apos;)가 있는 문장은 프로그램을 설명하는 주석문으로, 실행되지 않습니다. 매크로 이름이
+							‘매크로2’임을 알 수 있습니다.
+						</li>
+						<li>
+							활성화된 셀에서 아래쪽으로 0칸, 오른쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번째 행(1)을
+							선택합니다.
+							<ul>
+								<li>Offset : 지정된 범위에서 떨어진 범위</li>
+								<li>
+									Range(“A1”) : [A1] 셀을 의미하는 것이 아니라 첫 번째 열(A), 첫 번째 행(1)을 의미합니다.
+									‘Range(“A2”)’로 지정하면 첫 번째 열(A), 두 번째 행(2)을 의미합니다.{' '}
+								</li>
+								<li>※ ‘ActiveCell.Offset(0, 1).Select’로 작성해도 결과는 동일합니다.</li>
+							</ul>
+						</li>
+						<li>활성화된 셀에 성적현황을 입력합니다.</li>
+						<li>
+							활성화된 셀에서 아래쪽으로 1칸, 왼쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번 째 행(1)을
+							선택합니다.
+						</li>
+						<li>활성화된 셀에 학번을 입력합니다.</li>
+						<li>
+							활성화된 셀에서 아래쪽으로 0칸, 오른쪽으로 1칸 이동한 후 그 셀을 기준으로 첫 번째 열(A), 첫 번째 행(1)을
+							선택합니다.
+						</li>
+						<li>활성화된 셀에 학과를 입력합니다. </li>
+						<li>[C2] 셀을 선택합니다.</li>
+						<li>활성화된 셀에 이름을 입력합니다. </li>
+						<li>[A3] 셀을 선택합니다.</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 8,
 			question: '다음과 같은 이벤트를 실행시켰을 때 나타나는 결과로 옳은 것은?',
+			questionBody: (
+				<RequestBody>
+					Private Sub
+					<br />
+					&nbs;&nbs;Range(“B2:C3”).Select <br />
+					&nbs;&nbs;Selection.Delete Shift:=xlToLeft
+					<br />
+					End Sub
+				</RequestBody>
+			),
 			answer: [
-				'1 [B2:C3] 영역을 셀의 왼쪽에 복사한다.',
-				'2 [B2:C3] 영역을 삭제한 후 왼쪽에 있는 셀을 오른쪽으로 이동한다.',
-				'3 [B2:C3] 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로 이동한다.',
-				'4 [B2:C3] 영역을 셀의 오른쪽에 복사한다.',
+				'[B2:C3] 영역을 셀의 왼쪽에 복사한다.',
+				'[B2:C3] 영역을 삭제한 후 왼쪽에 있는 셀을 오른쪽으로 이동한다.',
+				'[B2:C3] 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로 이동한다.',
+				'[B2:C3] 영역을 셀의 오른쪽에 복사한다.',
 			],
-			correct: 0,
-			description:
-				'[해설]\nPrivate Sub\nRange(“B2:C3”).Select\nSelection.Delete Shift:=xlToLeft\nEnd Sub\n• [B2:C3] 영역을 선택합니다.\n• 선택한 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로 이동합니다.',
+			correct: 3,
+			description: (
+				<VStack>
+					Private Sub
+					<br />
+					&nbs;&nbs;Range(“B2:C3”).Select // [B2:C3] 영역을 선택합니다.
+					<br />
+					&nbs;&nbs;Selection.Delete Shift:=xlToLeft // 선택한 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로 이동합니다.
+					<br />
+					End Sub
+				</VStack>
+			),
 		},
 		{
 			contentId: 9,
 			question: '다음 중 주어진 <Customer> 테이블을 참조하여 아래의 SQL문을 실행한 결과로 옳은 것은?',
-			answer: ['13', '25', '37', '49'],
-			correct: 0,
-			description:
-				'[해설]\n하위 질의의 결과가 기본 질의의 조건으로 사용되므로 다음과 같은 순서로 질의문을 실행하면 됩니다.\n❶ SELECT Distinct City From Customer : <Customer> 테이블에서 ‘City’ 필드를 추출하되, 중복되는 필드는 한 번만 표시합니다.\n❷ SELECT Count(*) FROM ❶ : ❶에서 추출된 결과를 대상으로 레코드의 개수(Count)를 산출합니다. 결과는 5입니다.\nCity\n부산\n서울\n대전\n광주\n인천',
+			questionBody: (
+				<VStack $gap="1.2rem">
+					<RequestBody>
+						SELECT Count(*) <br />
+						FROM (SELECT Distinct City From Customer);
+					</RequestBody>
+					<img src={IMAGES.Img_9} alt="" />
+				</VStack>
+			),
+			answer: ['3', '5', '7', '9'],
+			correct: 2,
+			description: (
+				<VStack $gap="1.2rem">
+					하위 질의의 결과가 기본 질의의 조건으로 사용되므로 다음과 같은 순서로 질의문을 실행하면 됩니다.
+					<ol>
+						<li>
+							SELECT Distinct City From Customer : {'<Customer>'} 테이블에서 ‘City’ 필드를 추출하되, 중복되는 필드는 한
+							번만 표시합니다.
+							<br />
+							<table>
+								<tr>
+									<th>City</th>
+								</tr>
+								<tr>
+									<td>부산</td>
+								</tr>
+								<tr>
+									<td>서울</td>
+								</tr>
+								<tr>
+									<td>대전</td>
+								</tr>
+								<tr>
+									<td>광주</td>
+								</tr>
+								<tr>
+									<td>인천</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							SELECT Count(*) FROM ❶ : ❶에서 추출된 결과를 대상으로 레코드의 개수(Count)를 산출합니다. 결과는 5입니다.
+						</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 10,
 			question: '다음 중 아래의 VBA 코드에 대한 설명으로 옳지 않은 것은?',
+			questionBody: (
+				<RequestBody>
+					Private Sub Worksheet_Change(ByVal Target As Range) <br />
+					&nbsp;&nbsp;If Target.Address = Range(“A1”).Address Then <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Target.Font.ColorIndex = 5 <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;MsgBox Range(“A1”).Value & “입니다.“ <br />
+					&nbsp;&nbsp;End If <br />
+					End Sub
+				</RequestBody>
+			),
 			answer: [
-				'1 [A1] 셀이 변경되면 [A1] 셀의 글꼴 색이 ColorIndex가 5인 색으로 변경된다.',
-				'2 [A1] 셀을 선택하면 [A1] 셀의 값이 메시지 박스에 표시된다.',
-				'3 VBA 코드가 작성된 워크시트에서만 동작한다.',
-				'4 일반 모듈이 아닌 워크시트 이벤트를 사용한 코드이다.',
+				'[A1] 셀이 변경되면 [A1] 셀의 글꼴 색이 ColorIndex가 5인 색으로 변경된다.',
+				'[A1] 셀을 선택하면 [A1] 셀의 값이 메시지 박스에 표시된다.',
+				'VBA 코드가 작성된 워크시트에서만 동작한다.',
+				'일반 모듈이 아닌 워크시트 이벤트를 사용한 코드이다.',
 			],
-			correct: 0,
-			description:
-				'[해설]\n❶ ‘Worksheet_Change’ 프로시저에 입력된 코드는 셀의 값이 변경되거나 셀이 이동하는 등 워크시트에 변화가 있을 때 작동합니다.\n❷ 현재 작업하고 있는 셀의 주소가 [A1] 셀이면 ❸~❹번을 수행합니다.\n❸ 현재 작업하고 있는 셀의 글꼴 색을 파랑색(5)으로 지정합니다.\n❹ [A1] 셀의 값과 입니다.를 연결한 메시지가 표시된 메시지 박스를 표시합니다.\n❶ Private Sub Worksheet_Change(ByVal Target As Range)\n❷ ❸ ❹\nIf Target.Address = Range(“A1”).Address Then\nTarget.Font.ColorIndex = 5\nMsgBox Range(“A1”).Value & “입니다.“\nEnd If\nEnd Sub',
+			correct: 2,
+			description: (
+				<VStack $gap="1.2rem">
+					<RequestBody>
+						<ol>
+							<li>Private Sub Worksheet_Change(ByVal Target As Range)</li>
+							<li>If Target.Address = Range(“A1”).Address Then</li>
+							<li>Target.Font.ColorIndex = 5</li>
+							<li>MsgBox Range(“A1”).Value & “입니다.“</li>
+						</ol>
+						End If
+						<br />
+						End Sub
+					</RequestBody>
+
+					<ol>
+						<li>
+							‘Worksheet_Change’ 프로시저에 입력된 코드는 셀의 값이 변경되거나 셀이 이동하는 등 워크시트에 변화가 있을
+							때 작동합니다.
+						</li>
+						<li>현재 작업하고 있는 셀의 주소가 [A1] 셀이면 ❸~❹번을 수행합니다.</li>
+						<li>현재 작업하고 있는 셀의 글꼴 색을 파랑색(5)으로 지정합니다.</li>
+						<li>[A1] 셀의 값과 입니다.를 연결한 메시지가 표시된 메시지 박스를 표시합니다.</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 11,
-			question: '다음 중 아래의 VBA 코드를 실행한 결과 메시지 상자에 표시되는 내용은 무엇인가?',
+			question: '[미완성]다음 중 아래의 VBA 코드를 실행한 결과 메시지 상자에 표시되는 내용은 무엇인가?',
 			answer: ['1 대한상공회의소', '2 상공', '3 대한활용회의소', '4 활용'],
 			correct: 0,
 			description:
