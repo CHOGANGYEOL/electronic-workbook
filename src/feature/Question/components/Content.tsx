@@ -74,7 +74,12 @@ const Content = ({ questionData }: { questionData: ReturnType<typeof useQuestion
 					>
 						{!isConfirm ? '정답 확인' : '되돌리기'}
 					</Button>
-					<Button $padding="0 2.4rem" type="submit" disabled={selectIdx === null}>
+					<Button
+						$padding="0 2.4rem"
+						type="submit"
+						// disabled 조건 개발 중 다음depth 빠른 확인을 위해 주석처리
+						// disabled={selectIdx === null}
+					>
 						{isLast ? '결과' : '다음'}
 					</Button>
 				</HStack>

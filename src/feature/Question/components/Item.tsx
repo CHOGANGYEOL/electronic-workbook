@@ -68,19 +68,29 @@ const ItemHead = styled.h5`
 
 const ListItem = styled.div<StyleProps>`
 	${({ theme }) => theme.font.body[2]}
+
 	${({ $isActive }) =>
 		$isActive &&
 		css`
 			font-weight: 600;
+			img {
+				opacity: 0.7;
+			}
 		`}
 	${({ $isWrong, theme }) =>
 		$isWrong &&
 		css`
+			img {
+				filter: sepia(1) saturate(5) hue-rotate(-50deg);
+			}
 			color: ${theme.colors.red[500]};
 		`}
 	${({ $isCorrect, theme }) =>
 		$isCorrect &&
 		css`
+			img {
+				filter: sepia(1) saturate(5) hue-rotate(180deg);
+			}
 			color: ${theme.colors.blue[500]};
 			font-weight: 600;
 		`}
