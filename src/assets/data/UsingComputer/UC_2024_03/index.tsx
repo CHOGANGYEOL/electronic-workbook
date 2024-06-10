@@ -820,104 +820,309 @@ export const UC_2024_03: Question = {
 		{
 			contentId: 17,
 			question: '다음의 쿼리 조건과 동일한 결과를 산출하는 것은 무엇인가?',
-			answer: ['1 “서울” Or “전주”', '2 “서울” || “전주”', '3 “서울” And “전주”', '4 “서울” && “전주”'],
-			correct: 0,
+			questionBody: <img src={IMAGES.Img_17} />,
+			answer: ['“서울” Or “전주”', '“서울” || “전주”', '“서울” And “전주”', '“서울” && “전주”'],
+			correct: 1,
 			description:
-				'[해설]\nIN 연산자는 필드 값이 IN 연산자의 인수로 지정된 값 중 하나가 포함된 레코드가 검색되므로 OR 연산을 수행한 것과 결과가 같습니다.',
+				'IN 연산자는 필드 값이 IN 연산자의 인수로 지정된 값 중 하나가 포함된 레코드가 검색되므로 OR 연산을 수행한 것과 결과가 같습니다.',
 		},
 		{
 			contentId: 18,
 			question: '쿼리의 [디자인 보기]에서 아래와 같이 설정한 경우, 다음 중 동일한 결과를 표시하는 SQL문은?',
+			questionBody: <img src={IMAGES.Img_18} />,
 			answer: [
-				'1 UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” AND 모집인원=2000;',
-				'2 UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” AND 모집인원>1000;',
-				'3 UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” OR 모집인원=2000;',
-				'4 UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” OR 모집인원>1000;',
+				'UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” AND 모집인원=2000;',
+				'UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” AND 모집인원>1000;',
+				'UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” OR 모집인원=2000;',
+				'UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” OR 모집인원>1000;',
 			],
-			correct: 0,
-			description:
-				'[해설]\n• <테이블1> 테이블의 ‘모집인원’ 필드 값을 2000으로 업데이트합니다. → UPDATE 테이블1 SET 모집인원 = 2000\n• 조건이 서로 다른 줄에 작성되었으므로 OR로 연결되어, 모집인원이 1000을 초과하거나 지역이 “서울”인 자료만을 대상으로 합니다. → WHERE 지역=“서울” OR 모집인원>1000;',
+			correct: 4,
+			description: (
+				<ul>
+					<li>
+						{'<테이블1>'} 테이블의 ‘모집인원’ 필드 값을 2000으로 업데이트합니다. → UPDATE 테이블1 SET 모집인원 = 2000
+					</li>
+					<li>
+						조건이 서로 다른 줄에 작성되었으므로 OR로 연결되어, 모집인원이 1000을 초과하거나 지역이 “서울”인 자료만을
+						대상으로 합니다. → WHERE 지역=“서울” OR 모집인원{'>'}1000;
+					</li>
+				</ul>
+			),
 		},
 		{
 			contentId: 19,
 			question:
 				'<회원> 테이블의 내용이 다음과 같을 때 SQL문을 실행한 결과 표시되는 레코드의 수는?\nSELECT DISTINCT 이름\nFROM 회원\nWHERE 이름 Like “이*” OR 이름 = “강감찬”;',
-			answer: ['13', '24', '35', '47'],
-			correct: 0,
-			description:
-				'[해설]\n• SELECT DISTINCT 이름 : ‘이름’ 필드를 검색하되 중복된 이름은 한 번만 표시합니다.\n• FROM 회원 : <회원> 테이블에서 검색합니다.\n• WHERE 이름 Like “이*” OR 이름=“강감찬” : 이름이 “이”로 시작하거나 “강감찬”인 레코드만을 대상으로 검색합니다.\n※ 질의문의 수행 결과 표시되는 레코드의 개수는 3개입니다.',
+			questionBody: (
+				<VStack $gap="1.2rem">
+					<img src={IMAGES.Img_19} />
+					<RequestBody>
+						SELECT DISTINCT 이름
+						<br />
+						FROM 회원
+						<br />
+						WHERE 이름 Like “이*” OR 이름 = “강감찬”;
+					</RequestBody>
+				</VStack>
+			),
+			answer: ['3', '4', '5', '7'],
+			correct: 1,
+			description: (
+				<VStack $gap="1rem">
+					<ul>
+						<li>SELECT DISTINCT 이름 : ‘이름’ 필드를 검색하되 중복된 이름은 한 번만 표시합니다.</li>
+
+						<li>
+							FROM 회원 : {'<회원>'} 테이블에서 검색합니다.
+							<br />
+							<table>
+								<tr>
+									<th>이름</th>
+								</tr>
+								<tr>
+									<td>이소유</td>
+								</tr>
+								<tr>
+									<td>이소미</td>
+								</tr>
+								<tr>
+									<td>김선호</td>
+								</tr>
+								<tr>
+									<td>강준길</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							WHERE 이름 Like “이*” OR 이름=“강감찬” : 이름이 “이”로 시작하거나 “강감찬”인 레코드만을 대상으로
+							검색합니다.
+							<br />
+							<table>
+								<tr>
+									<th>이름</th>
+								</tr>
+								<tr>
+									<td>이소유</td>
+								</tr>
+								<tr>
+									<td>이소미</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+					※ 질의문의 수행 결과 표시되는 레코드의 개수는 3개입니다.
+				</VStack>
+			),
 		},
 		{
 			contentId: 20,
 			question:
 				'다음 중 학생(학번, 이름, 학과) 테이블에 학과가 ‘경영학과’, 학번이 300, 이름이 ‘김상공’인 학생의 정보를 추가하는 SQL 문으로 올바른 것은?',
 			answer: [
-				'1 Insert Into 학생(학번, 이름, 학과) Values(300, ‘김상공’, ‘경영학과’);',
-				'2 Insert 학생(학번, 이름, 학과) Values(300, ‘김상공’, ‘경영학과’);',
-				'3 Insert Into 학생(학번, 이름, 학과) Values(300, 김상공, 경영학과);',
-				'4 Insert 학생(학번, 이름, 학과) Values(300, 김상공, 경영학과);',
+				'Insert Into 학생(학번, 이름, 학과) Values(300, ‘김상공’, ‘경영학과’);',
+				'Insert 학생(학번, 이름, 학과) Values(300, ‘김상공’, ‘경영학과’);',
+				'Insert Into 학생(학번, 이름, 학과) Values(300, 김상공, 경영학과);',
+				'Insert 학생(학번, 이름, 학과) Values(300, 김상공, 경영학과);',
 			],
-			correct: 0,
-			description:
-				'[해설]\n• <학생> 테이블에 학번, 이름, 학과를 삽입하므로 Insert Into 학생(학번, 이름, 학과)입니다.\n• 삽입되는 속성과 값이 학번은 300, 이름은 ‘김상공’, 학과는 ‘경영학과’이므로 Value(300, ‘김상공’, ‘경영학과’)입니다.\n※ ‘김상공’이나 ‘경영학과’와 같이 텍스트 형식을 입력할 때는 작은따옴표(‘’)나 큰따옴표(“”)로 묶어야 합니다. 그렇지 않으면 해당 값을 필드로 인식하여 매개 변수 대화상자를 표시합니다.',
+			correct: 1,
+			description: (
+				<VStack $gap="1rem">
+					<ul>
+						<li>{'<학생>'} 테이블에 학번, 이름, 학과를 삽입하므로 Insert Into 학생(학번, 이름, 학과)입니다.</li>
+						<li>
+							삽입되는 속성과 값이 학번은 300, 이름은 ‘김상공’, 학과는 ‘경영학과’이므로 Value(300, ‘김상공’,
+							‘경영학과’)입니다.
+						</li>
+					</ul>
+					※ ‘김상공’이나 ‘경영학과’와 같이 텍스트 형식을 입력할 때는 작은따옴표(‘’)나 큰따옴표(“”)로 묶어야 합니다.
+					그렇지 않으면 해당 값을 필드로 인식하여 매개 변수 대화상자를 표시합니다.
+				</VStack>
+			),
 		},
 		{
 			contentId: 21,
 			question: '다음의 <거래처>와 <매출> 테이블을 조인하여 질의를 수행한 결과에 대한 설명으로 가장 옳지 않은 것은?',
+			questionBody: (
+				<VStack $gap="1.2rem">
+					<img src={IMAGES.Img_21_1} />
+					<img src={IMAGES.Img_21_2} />
+					<RequestBody>
+						SELECT * FROM 매출
+						<br />
+						INNER JOIN 거래처 ON 매출.매출거래처=거래처.거래처번호;
+					</RequestBody>
+				</VStack>
+			),
 			answer: [
-				'1 조회 결과의 필드 수는 5개이다.',
-				'2 조회 결과의 레코드 수는 4개이다.',
-				'3 거래처번호 3에 대한 매출 정보는 나타나지 않는다.',
-				'4 매출번호 4에 대한 매출 정보는 나타나지 않는다.',
+				'조회 결과의 필드 수는 5개이다.',
+				'조회 결과의 레코드 수는 4개이다.',
+				'거래처번호 3에 대한 매출 정보는 나타나지 않는다.',
+				'매출번호 4에 대한 매출 정보는 나타나지 않는다.',
 			],
-			correct: 0,
-			description:
-				'[해설]\n내부 조인(Inner Join)은 조인된 필드(거래처번호와 매출거래처)가 일치하는 행만 추출되는 것으로, 추출된 결과는 다음과 같습니다.\n※ 조회 결과로 표시되는 레코드 수는 3개입니다.',
+			correct: 2,
+			description: (
+				<VStack $gap="1.2rem">
+					내부 조인(Inner Join)은 조인된 필드(거래처번호와 매출거래처)가 일치하는 행만 추출되는 것으로, 추출된 결과는
+					다음과 같습니다.
+					<table>
+						<tr>
+							<th>거래처번호</th>
+							<th>거래처명</th>
+							<th>매출번호</th>
+							<th>매출거래처</th>
+							<th>매출일</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>강릉</td>
+							<td>1</td>
+							<td>1</td>
+							<td>05-01</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>강릉</td>
+							<td>3</td>
+							<td>1</td>
+							<td>05-02</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>대한</td>
+							<td>2</td>
+							<td>2</td>
+							<td>05-08</td>
+						</tr>
+					</table>
+					※ 조회 결과로 표시되는 레코드 수는 3개입니다.
+				</VStack>
+			),
 		},
 		{
 			contentId: 22,
-			question: '<상품>과 <주문> 테이블을 대상으로 SQL문을 실행했을 때 결과로 표시되는 상품번호로 옳은 것은?\n<SQL문>',
-			answer: ['1 1, 2', '2 2, 3, 4', '3 1, 2, 3, 4, 5', '4 1, 3, 5'],
-			correct: 0,
-			description:
-				'[해설]\n하위 질의의 결과가 기본 질의의 조건으로 사용되므로 다음과 같은 순서로 질의문을 수행하면 됩니다.\n❶ Select 상품번호 From 주문 Where 거래처번호 Between 30 And 50 : <주문> 테이블에서 ‘상품 번호’ 필드를 추출하되, 거래처번호가 30에서 50 사이인 레코드만을 대상으로 합니다.\n❷ Select 상품번호 From 상품 Where 상품번호 In ( ❶ ) : <상품> 테이블에서 상품번호가 ❶에서 추출한 상품번호와 같은 레코드의 상품번호를 표시합니다.\n※ 질의문의 수행 결과 표시되는 ‘상품번호’는 2, 3, 4입니다.',
+			question: '<상품>과 <주문> 테이블을 대상으로 SQL문을 실행했을 때 결과로 표시되는 상품번호로 옳은 것은?',
+			questionBody: (
+				<VStack $gap="1.2rem">
+					<img src={IMAGES.Img_22_1} />
+					<img src={IMAGES.Img_22_2} />
+					{'<SQL문>'}
+					<RequestBody>
+						Select 상품번호
+						<br />
+						From 상품
+						<br />
+						Where 상품번호 In (Select 상품번호
+						<br />
+						From 주문 Where 거래처번호 Between 30 And 50);
+					</RequestBody>
+				</VStack>
+			),
+			answer: ['1, 2', '2, 3, 4', '1, 2, 3, 4, 5', '1, 3, 5'],
+			correct: 2,
+			description: (
+				<VStack $gap="1rem">
+					하위 질의의 결과가 기본 질의의 조건으로 사용되므로 다음과 같은 순서로 질의문을 수행하면 됩니다.
+					<ol>
+						<li>
+							Select 상품번호 From 주문 Where 거래처번호 Between 30 And 50 : {'<주문>'} 테이블에서 ‘상품 번호’ 필드를
+							추출하되, 거래처번호가 30에서 50 사이인 레코드만을 대상으로 합니다.
+						</li>
+						<li>
+							Select 상품번호 From 상품 Where 상품번호 In ( ❶ ) : {'<상품>'} 테이블에서 상품번호가 ❶에서 추출한
+							상품번호와 같은 레코드의 상품번호를 표시합니다.
+						</li>
+					</ol>
+					※ 질의문의 수행 결과 표시되는 ‘상품번호’는 2, 3, 4입니다.
+				</VStack>
+			),
 		},
 		{
 			contentId: 23,
 			question:
 				'다음 중 <사원> 테이블에서 ‘나이’ 필드의 값이 30 이상 35 이하인 사원의 ‘부서’와 ‘이름’ 필드를 검색하는 SQL 문으로 틀린 것은?',
 			answer: [
-				'1 Select 부서, 이름 From 사원 Where 나이 Between 30 And 35;',
-				'2 Select 부서, 이름 From 사원 Where 나이 In(30, 31, 32, 33, 34, 35);',
-				'3 Select 부서, 이름 From 사원 Where 나이 >= 30 And <=35;',
-				'4 Select 부서, 이름 From 사원 Where 사원.나이 >= 30 And 사원.나이 <=35;',
+				'Select 부서, 이름 From 사원 Where 나이 Between 30 And 35;',
+				'Select 부서, 이름 From 사원 Where 나이 In(30, 31, 32, 33, 34, 35);',
+				'Select 부서, 이름 From 사원 Where 나이 >= 30 And <=35;',
+				'Select 부서, 이름 From 사원 Where 사원.나이 >= 30 And 사원.나이 <=35;',
 			],
-			correct: 0,
+			correct: 3,
 			description:
-				'[해설]\nAnd나 Or 연산자를 이용해 한 개의 필드에 여러 개의 조건을 지정할 때는 4번과 같이 조건 각각에 필드명을 지정해야 합니다.',
+				'And나 Or 연산자를 이용해 한 개의 필드에 여러 개의 조건을 지정할 때는 4번과 같이 조건 각각에 필드명을 지정해야 합니다.',
 		},
 		{
 			contentId: 24,
 			question:
 				'다음 중 현재 폼에서 ‘cmd숨기기’ 단추를 클릭하는 경우, DateDue 컨트롤이 표시되지 않도록 하기 위한 이벤트 프로시저로 옳은 것은?',
 			answer: [
-				'1 Private Sub cmd숨기기_Click( )\nMe.[DateDue]!Visible = False\nEnd Sub',
-				'2 Private Sub cmd숨기기_DblClick( )\nMe!DateDue.Visible = True\nEnd Sub',
-				'3 Private Sub cmd숨기기_Click( )\nMe![DateDue].Visible = False\nEnd Sub',
-				'4 Private Sub cmd숨기기_DblClick( )\nMe.DateDue!Visible = True\nEnd Sub',
+				<p key={'UC_2024_03_24'}>
+					Private Sub cmd숨기기_Click( )<br />
+					&nbsp;&nbsp;Me.[DateDue]!Visible = False
+					<br />
+					End Sub
+				</p>,
+				<p key={'UC_2024_03_24'}>
+					Private Sub cmd숨기기_DblClick( )<br />
+					&nbsp;&nbsp;Me!DateDue.Visible = True
+					<br />
+					End Sub
+				</p>,
+				<p key={'UC_2024_03_24'}>
+					Private Sub cmd숨기기_Click( )<br />
+					&nbsp;&nbsp;Me![DateDue].Visible = False
+					<br />
+					End Sub
+				</p>,
+				<p key={'UC_2024_03_24'}>
+					Private Sub cmd숨기기_DblClick( )<br />
+					&nbsp;&nbsp;Me.DateDue!Visible = True
+					<br />
+					End Sub
+				</p>,
 			],
-			correct: 0,
-			description:
-				'[해설]\n• 컨트롤을 마우스로 클릭했을 때 발생하는 이벤트는 Click 이벤트입니다. 그러므로 ‘cmd숨기기’ 단추를 클릭했을 때 발생하는 이벤트 프로시저는 ‘Private Sub cmd숨기기_Click( )’으로 시작해야 합니다.\n• 폼, 보고서 컨트롤 등의 표시 여부를 결정하는 속성은 Visible이며, ‘Visible = True’와 같이 Visible 속성을 ‘True’로 설정하면 표시하고, ‘False’로 설정하면 표시하지 않습니다.\n• 개체명과 컨트롤명은 느낌표(!)로 구분하고 컨트롤에 속성을 지정할 때는 점(.)으로 연결합니다.',
+			correct: 3,
+			description: (
+				<ul>
+					<li>
+						컨트롤을 마우스로 클릭했을 때 발생하는 이벤트는 Click 이벤트입니다. 그러므로 ‘cmd숨기기’ 단추를 클릭했을 때
+						발생하는 이벤트 프로시저는 ‘Private Sub cmd숨기기_Click( )’으로 시작해야 합니다.
+					</li>
+					<li>
+						폼, 보고서 컨트롤 등의 표시 여부를 결정하는 속성은 Visible이며, ‘Visible = True’와 같이 Visible 속성을
+						‘True’로 설정하면 표시하고, ‘False’로 설정하면 표시하지 않습니다.
+					</li>
+					<li>개체명과 컨트롤명은 느낌표(!)로 구분하고 컨트롤에 속성을 지정할 때는 점(.)으로 연결합니다.</li>
+				</ul>
+			),
 		},
 		{
 			contentId: 25,
 			question:
 				'아래의 프로시저를 이용하여 [A1:C3] 영역에서 내용만 지우려고 한다. 다음 중 괄호 안에 들어갈 코드로 옳은 것은?\nSub Procedure() Range(“A1:C3”).Select Selection.( ) End Sub',
-			answer: ['1 DeleteContents', '2 FreeContents', '3 ClearContents', '4 DeactivateContents'],
-			correct: 0,
-			description:
-				'[해설]\nSub Procedure( )\nRange(“A1:C3”).Select [A1:C3] 영역을 선택합니다.\nSelection.ClearContents 선택한 영역에 지정된 내용만 삭제합니다.\nEnd Sub',
+			questionBody: (
+				<RequestBody>
+					Sub Procedure() <br />
+					&nbsp;&nbsp;Range(“A1:C3”).Select <br />
+					&nbsp;&nbsp;Selection.( ) <br />
+					End Sub
+				</RequestBody>
+			),
+			answer: ['DeleteContents', 'FreeContents', 'ClearContents', 'DeactivateContents'],
+			correct: 3,
+			description: (
+				<ul>
+					<li>Sub Procedure( )</li>
+					<li>Range(“A1:C3”).Select // [A1:C3] 영역을 선택합니다.</li>
+					<li>Selection.ClearContents // 선택한 영역에 지정된 내용만 삭제합니다.</li>
+					<li>End Sub</li>
+				</ul>
+			),
 		},
 	],
 };
