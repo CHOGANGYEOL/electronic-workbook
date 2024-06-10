@@ -601,94 +601,242 @@ export const UC_2024_03: Question = {
 		},
 		{
 			contentId: 11,
-			question: '[미완성]다음 중 아래의 VBA 코드를 실행한 결과 메시지 상자에 표시되는 내용은 무엇인가?',
-			answer: ['1 대한상공회의소', '2 상공', '3 대한활용회의소', '4 활용'],
-			correct: 0,
-			description:
-				'[해설]\n❶ SampleString 변수를 선언합니다.\n❷ SampleString 변수에 “대한상공회의소”를 저장합니다.\n❸ SampleString 변수에 있는 텍스트 “대한상공회의소”의 세 번째 문자부터 2글자(상공) 대신 “활용”을 저장합니다(대한활용회의소).\n❹ SampleString 변수에 있는 내용을 메시지 박스(MsgBox)로 표시합니다.\nPrivate Sub Form_Load( )\n❶ Dim SampleString\n❷ SampleString = “대한상공회의소”\n❸ Mid(SampleString, 3, 2) = “활용”\n❹ MsgBox (SampleString)\nEnd Sub',
+			question: '다음 중 아래의 VBA 코드를 실행한 결과 메시지 상자에 표시되는 내용은 무엇인가?',
+			questionBody: (
+				<RequestBody>
+					Private Sub Form_Load( )<br />
+					&nbsp;&nbsp;Dim SampleString
+					<br />
+					&nbsp;&nbsp;SampleString = “대한상공회의소” <br />
+					&nbsp;&nbsp;Mid(SampleString, 3, 2) = “활용” <br />
+					&nbsp;&nbsp;MsgBox (SampleString) <br />
+					End Sub
+				</RequestBody>
+			),
+			answer: ['대한상공회의소', '상공', '대한활용회의소', '활용'],
+			correct: 3,
+			description: (
+				<VStack $gap="1.2rem">
+					<RequestBody>
+						Private Sub Form_Load( )
+						<ol>
+							<li>Dim SampleString</li>
+							<li>SampleString = “대한상공회의소”</li>
+							<li>Mid(SampleString, 3, 2) = “활용”</li>
+							<li>MsgBox (SampleString)</li>
+						</ol>
+						End Sub
+					</RequestBody>
+					<ol>
+						<li>SampleString 변수를 선언합니다.</li>
+						<li>SampleString 변수에 “대한상공회의소”를 저장합니다.</li>
+						<li>
+							SampleString 변수에 있는 텍스트 “대한상공회의소”의 세 번째 문자부터 2글자(상공) 대신 “활용”을
+							저장합니다(대한활용회의소).
+						</li>
+						<li>SampleString 변수에 있는 내용을 메시지 박스(MsgBox)로 표시합니다.</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 12,
 			question:
 				'‘cmd조회’ 명령 단추를 클릭하면 ‘항공사코드’ 필드의 값과 ‘cmb조회’ 컨트롤에 입력된 값이 같은 레코드만 표시되도록 이벤트 프로시저를 작성할 경우 ᄀ에 들어갈 알맞은 코드는?',
-			answer: ['1 Me.FilterOn', '2 Me.FilterOn = True', '3 Me.FilterOn = False', '4 Me.FilterOn = OK'],
-			correct: 0,
-			description:
-				'[해설]\n• FilterOn 속성은 Filter에 정의된 조건을 폼이나 보고서에 적용할지를 지정합니다.\n• FilterOn 속성이 True이면 Filter 속성을 적용하고, False이면 Filter 속성을 해제합니다.',
+			questionBody: (
+				<RequestBody>
+					Private Sub cmd조회_Click( )<br />
+					&nbsp;&nbsp;Me.Filter = “항공사코드 = ‘” & cmb조회 & “’” &nbsp;&nbsp;
+					<br /> ( ᄀ )
+					<br />
+					End Sub
+				</RequestBody>
+			),
+			answer: ['Me.FilterOn', 'Me.FilterOn = True', 'Me.FilterOn = False', 'Me.FilterOn = OK'],
+			correct: 2,
+			description: (
+				<ul>
+					<li>FilterOn 속성은 Filter에 정의된 조건을 폼이나 보고서에 적용할지를 지정합니다.</li>
+					<li>FilterOn 속성이 True이면 Filter 속성을 적용하고, False이면 Filter 속성을 해제합니다.</li>
+				</ul>
+			),
 		},
 		{
 			contentId: 13,
-			question: '다음 중 아래 시트에서 <변경 전> 내용을 <변경 후>와 같이 변경하는 수식으로 옳은 것은?',
+			question: '다음 중 아래와 같은 이벤트 프로시저를 실행하는 Command1 단추를 클릭했을 때 실행 결과로 옳은 것은?',
+			questionBody: (
+				<RequestBody>
+					Private Sub Command1_Click( ) <br />
+					&nbsp;&nbsp;DoCmd.OpenForm “사원정보”, acNormal <br />
+					&nbsp;&nbsp;DoCmd.GoToRecord , , acNewRec <br />
+					End Sub
+				</RequestBody>
+			),
 			answer: [
-				'=SUBSTITUTE(A2, “136”, “36”, 1)',
-				'=SUBSTITUTE(A2, “136”, “36”, 2)',
-				'=SUBSTITUTE(A2, “36”, “136”, 1)',
-				'=SUBSTITUTE(A2, “36”, “136”, 2)',
+				'사원정보 테이블이 열리고 새 레코드를 입력할 수 있도록 비워진 테이블이 열린다.',
+				'사원정보 폼이 열리고 첫 번째 레코드의 가장 왼쪽 컨트롤에 포커스가 표시된다.',
+				'사원정보 폼이 열리고 마지막 레코드의 가장 왼쪽 컨트롤에 포커스가 표시된다.',
+				'사원정보 폼이 열리고 새 레코드를 입력할 수 있도록 비워진 폼이 표시된다.',
 			],
-			correct: 0,
+			correct: 4,
+			description: (
+				<VStack>
+					<RequestBody>
+						<ol>
+							<li>Private Sub Command1_Click( )</li>
+							<li>DoCmd.OpenForm “사원정보”, acNormal</li>
+							<li>DoCmd.GoToRecord , , acNewRec</li>
+						</ol>
+						End Sub
+					</RequestBody>
+
+					<ol>
+						<li>‘Command1’ 단추를 클릭하면 ➋~➌번을 실행합니다.</li>
+						<li>‘사원정보’라는 폼이 열립니다.</li>
+						<li>폼의 마지막에 추가되는 빈 레코드로 이동하여 새로운 데이터를 입력할 수 있도록 합니다.</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 14,
-			question: '다음 중 VBA 코드를 실행한 결과로 옳지 않은 것은?',
+			question: '다음 중 아래의 <급여> 테이블에 대한 SQL 명령과 실행 결과로 옳지 않은 것은? (단, 빈칸은 Null임)',
+			questionBody: (
+				<table>
+					<tr>
+						<th>사원번호</th>
+						<th>성명</th>
+						<th>가족수</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>가</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>나</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>다</td>
+						<td></td>
+					</tr>
+				</table>
+			),
 			answer: [
-				'1 MsgBox는 변수의 값을 표시한다.',
-				'2 Range(“A1”)은 A1 셀을 선택한다.',
-				'3 Dim은 변수를 선언한다.',
-				'4 ActiveCell은 활성화된 셀을 의미한다.',
+				'SELECT COUNT(성명) FROM 급여;를 실행한 결과는 3이다.',
+				'SELECT COUNT(가족수) FROM 급여;를 실행한 결과는 3이다.',
+				'SELECT COUNT(*) FROM 급여;를 실행한 결과는 3이다.',
+				'SELECT COUNT(*) FROM 급여 WHERE 가족수 Is Null;을 실행한 결과는 1이다.',
 			],
-			correct: 0,
-			description:
-				'[해설]\nVBA 코드에서 MsgBox는 메시지 박스를 표시하고, Dim은 변수를 선언합니다. Range(“A1”)은 A1 셀을 선택하는 코드입니다. ActiveCell은 현재 활성화된 셀을 의미합니다.',
+			correct: 2,
+			description: (
+				<VStack $gap="1.2rem">
+					COUNT( ) 함수의 인수로 필드명을 지정하면 해당 필드에서 비어있지 않은 데이터의 개수를 구합니다.
+					<ol>
+						<li>
+							SELECT COUNT(성명) FROM 급여;
+							<br />
+							‘성명’ 필드가 비어있지 않은 자료의 개수를 구하므로 결과는 3입니다.
+						</li>
+						<li>
+							SELECT COUNT(가족수) FROM 급여;
+							<br />
+							‘가족수’ 필드가 비어있지 않은 자료의 개수를 구하므로 결과는 2입니다.
+						</li>
+						<li>
+							SELECT COUNT(*) FROM 급여;
+							<br />
+							전체 레코드의 개수를 구하므로 결과는 3입니다.
+						</li>
+						<li>
+							SELECT COUNT(*) FROM 급여 WHERE 가족수 Is Null;
+							<br />
+							‘가족수 Is Null’이라는 조건, 즉 ‘가족수 필드의 값이 비어있는’ 조건에 맞는 자료의 개수를 구하므로 결과는
+							1입니다.
+						</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 15,
-			question: '다음 중 아래 시트에서 B2 셀의 값을 변경하는 수식으로 옳은 것은?',
-			answer: [
-				'=IF(A2>10, “크다”, “작다”)',
-				'=IF(A2>10, “작다”, “크다”)',
-				'=IF(A2<10, “크다”, “작다”)',
-				'=IF(A2<10, “작다”, “크다”)',
-			],
-			correct: 0,
+			question: '다음 중 아래 <학생> 테이블에 대한 SQL문의 실행 결과로 옳은 것은?',
+			questionBody: (
+				<VStack>
+					<img src={IMAGES.Img_15} />
+					<RequestBody>
+						SELECT AVG([나이]) FROM 학생 <br />
+						WHERE 학년=“SN” GROUP BY 전공 <br />
+						HAVING COUNT(*) {'>'}= 2;
+					</RequestBody>
+				</VStack>
+			),
+			answer: ['21', '22', '23', '24'],
+			correct: 4,
+			description: (
+				<VStack>
+					<ul>
+						<li>SELECT AVG([나이]) FROM 학생 : {'<학생>'} 테이블에서 ‘나이’ 필드의 평균을 검색합니다.</li>
+						<li>WHERE 학년=“SN” : ‘학년’ 필드의 값이 “SN”인 레코드만을 대상으로 검색합니다.</li>
+						<li>GROUP BY 전공 : ‘전공’ 필드를 기준으로 그룹을 지정합니다.</li>
+						<li>HAVING COUNT(*){'>'}=2 : 그룹별로 레코드의 개수가 2개 이상인 그룹만을 대상으로 검색합니다.</li>
+					</ul>
+					※ 질의문의 수행 결과 나이의 평균은 (23+25)/2 = 24입니다.
+				</VStack>
+			),
 		},
 		{
 			contentId: 16,
-			question: '다음 중 주어진 SQL문을 실행한 결과로 옳은 것은?',
+			question: '도서(도서명, 저자, 정가, 출판사) 테이블에 대해 다음과 같은 결과를 표시하는 SQL문은?',
+			questionBody: <img src={IMAGES.Img_16_1} />,
 			answer: [
-				"1 SELECT * FROM Customer WHERE City = '서울';",
-				"2 SELECT * FROM Customer WHERE City = '부산';",
-				"3 SELECT * FROM Customer WHERE City = '인천';",
-				"4 SELECT * FROM Customer WHERE City = '광주';",
+				'select * from 도서 order by 출판사 asc, 정가 asc;',
+				'select * from 도서 order by 저자 asc, 출판사 desc;',
+				'select * from 도서 order by 정가 desc, 저자 asc;',
+				'select * from 도서 order by 도서명 asc, 정가 desc;',
 			],
-			correct: 0,
-			description:
-				"[해설]\nSQL문의 WHERE 절을 사용하여 특정 도시를 기준으로 데이터를 조회할 수 있습니다. 예를 들어, '서울'을 조회하려면 'SELECT * FROM Customer WHERE City = '서울';'을 사용합니다.",
+			correct: 1,
+			description: (
+				<VStack $gap="1.2rem">
+					문제의 그림은 ‘출판사’를 기준으로 오름차순(ASC) 정렬하고, ‘출판사’가 같은 경우 ‘정가’를 기준으로 오름차순(ASC)
+					정렬한 결과입니다.
+					<ol>
+						<li value={2}>
+							<img src={IMAGES.Img_16_2} />
+						</li>
+						<li>
+							<img src={IMAGES.Img_16_3} />
+						</li>
+						<li>
+							<img src={IMAGES.Img_16_4} />
+						</li>
+					</ol>
+				</VStack>
+			),
 		},
 		{
 			contentId: 17,
-			question: '다음 중 매크로 기록 기능을 사용하여 생성된 VBA 코드로 옳지 않은 것은?',
-			answer: [
-				'1 매크로는 반복 작업을 자동화한다.',
-				'2 매크로 코드에서 ActiveCell은 항상 A1 셀을 의미한다.',
-				'3 매크로 기록은 작업 과정을 VBA 코드로 저장한다.',
-				'4 매크로 코드는 VBA 편집기에서 수정할 수 있다.',
-			],
+			question: '다음의 쿼리 조건과 동일한 결과를 산출하는 것은 무엇인가?',
+			answer: ['1 “서울” Or “전주”', '2 “서울” || “전주”', '3 “서울” And “전주”', '4 “서울” && “전주”'],
 			correct: 0,
 			description:
-				'[해설]\n매크로는 반복 작업을 자동화하는 데 사용됩니다. 매크로 기록 기능을 사용하면 작업 과정을 VBA 코드로 저장할 수 있으며, 이 코드는 VBA 편집기에서 수정할 수 있습니다. ActiveCell은 현재 활성화된 셀을 의미하며, 항상 A1 셀을 의미하지는 않습니다.',
+				'[해설]\nIN 연산자는 필드 값이 IN 연산자의 인수로 지정된 값 중 하나가 포함된 레코드가 검색되므로 OR 연산을 수행한 것과 결과가 같습니다.',
 		},
 		{
 			contentId: 18,
-			question: '다음 중 아래 SQL문을 실행한 결과로 올바른 것은?',
+			question: '쿼리의 [디자인 보기]에서 아래와 같이 설정한 경우, 다음 중 동일한 결과를 표시하는 SQL문은?',
 			answer: [
-				"1 SELECT Name FROM Customer WHERE City = '서울';",
-				"2 SELECT Name FROM Customer WHERE City = '부산';",
-				"3 SELECT Name FROM Customer WHERE City = '대전';",
-				"4 SELECT Name FROM Customer WHERE City = '광주';",
+				'1 UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” AND 모집인원=2000;',
+				'2 UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” AND 모집인원>1000;',
+				'3 UPDATE 테이블1 SET 모집인원 > 1000 WHERE 지역=“서울” OR 모집인원=2000;',
+				'4 UPDATE 테이블1 SET 모집인원 = 2000 WHERE 지역=“서울” OR 모집인원>1000;',
 			],
 			correct: 0,
 			description:
-				"[해설]\nSQL문의 SELECT 절을 사용하여 특정 도시의 고객 이름을 조회할 수 있습니다. 예를 들어, '서울'에 거주하는 고객의 이름을 조회하려면 'SELECT Name FROM Customer WHERE City = '서울';'을 사용합니다.",
+				'[해설]\n• <테이블1> 테이블의 ‘모집인원’ 필드 값을 2000으로 업데이트합니다. → UPDATE 테이블1 SET 모집인원 = 2000\n• 조건이 서로 다른 줄에 작성되었으므로 OR로 연결되어, 모집인원이 1000을 초과하거나 지역이 “서울”인 자료만을 대상으로 합니다. → WHERE 지역=“서울” OR 모집인원>1000;',
 		},
 		{
 			contentId: 19,
