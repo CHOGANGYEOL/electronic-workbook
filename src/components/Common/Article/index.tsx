@@ -9,7 +9,7 @@ const Article = ({ children, $css }: Children & CSS) => {
 const Wrapper = styled.article<CSS>`
 	padding: 2rem;
 	background-color: ${({ theme }) => theme.colors.white};
-	border-radius: 8px;
+	border-radius: 4px;
 	width: 100%;
 	box-shadow: ${({ theme }) => theme.shadow.modal};
 	${({ $css }) => $css}
