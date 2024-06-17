@@ -68,7 +68,7 @@ const ItemHead = styled.h5`
 
 const ListItem = styled.div<StyleProps>`
 	${({ theme }) => theme.font.body[2]}
-
+	white-space: pre-wrap;
 	${({ $isActive }) =>
 		$isActive &&
 		css`

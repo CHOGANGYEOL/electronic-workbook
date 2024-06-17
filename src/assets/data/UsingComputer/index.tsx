@@ -1,6 +1,7 @@
 import { UC_2020_01 } from './UC_2020_01';
 import { UC_2020_02 } from './UC_2020_02';
 import { UC_2023_01 } from './UC_2023_01';
+import { UC_2023_02 } from './UC_2023_02';
 import { UC_2024_01 } from './UC_2024_01';
 import { UC_2024_02 } from './UC_2024_02';
 import { UC_2024_03 } from './UC_2024_03';
@@ -23,6 +24,7 @@ export const USING_COMPUTER: Data = {
 		UC_2024_03,
 		UC_2024_02,
 		UC_2024_01,
+		UC_2023_02,
 		UC_2023_01,
 		UC_2020_02,
 		UC_2020_01,
