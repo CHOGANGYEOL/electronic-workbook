@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { ellipsisCSS } from '../../assets/styles/ellipsis';
 import { HStack, VStack } from '../../components/Common';
 import Article from '../../components/Common/Article';
 import Loading from '../../components/Common/Loading';
@@ -26,7 +27,7 @@ const Question = () => {
 		>
 			<VStack $gap="2.4rem">
 				<ArticleTitle>
-					<HStack $justifyContent="space-between">
+					<HStack $justifyContent="space-between" $gap={'1.2rem'} $alignItems="flex-end">
 						<Label>{question.title}</Label>
 						{!isComplete ? (
 							<Progress total={question.contents.length} current={history.length} />
@@ -50,6 +51,7 @@ const Label = styled.label`
 	border-radius: 4px;
 	color: ${({ theme }) => theme.colors.white};
 	${({ theme }) => theme.font.body[2]};
+	${ellipsisCSS()}
 `;
 
 const Counter = styled(HStack)`

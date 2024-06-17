@@ -92,7 +92,6 @@ const ListItem = styled.div<StyleProps>`
 				filter: sepia(1) saturate(5) hue-rotate(180deg);
 			}
 			color: ${theme.colors.blue[500]};
-			font-weight: 600;
 		`}
 
     ${({ $readonly }) =>
