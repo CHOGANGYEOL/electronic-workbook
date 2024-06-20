@@ -433,8 +433,8 @@ export const UC_2024_05: Question = {
 			questionBody: (
 				<RequestBody>
 					<ul>
-						<li>좁은 공간에서 유용하게 사용하는 컨트롤이다. 목록에서 선택하거나 직접 입력할 수 있다. </li>
-						<li>목록에 있는 값만 입력할 수 있도록 설정할 수 있다.</li>
+						<li>폼이나 보고서의 원본으로 사용되는 데이터를 표시한다.</li>
+						<li>계산 결과를 표시한다.</li>
 					</ul>
 				</RequestBody>
 			),

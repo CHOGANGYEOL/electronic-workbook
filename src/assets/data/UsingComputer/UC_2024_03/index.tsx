@@ -478,8 +478,8 @@ export const UC_2024_03: Question = {
 				<RequestBody>
 					Private Sub
 					<br />
-					&nbs;&nbs;Range(“B2:C3”).Select <br />
-					&nbs;&nbs;Selection.Delete Shift:=xlToLeft
+					&nbsp;&nbsp;Range(“B2:C3”).Select <br />
+					&nbsp;&nbsp;Selection.Delete Shift:=xlToLeft
 					<br />
 					End Sub
 				</RequestBody>
@@ -495,9 +495,10 @@ export const UC_2024_03: Question = {
 				<VStack>
 					Private Sub
 					<br />
-					&nbs;&nbs;Range(“B2:C3”).Select // [B2:C3] 영역을 선택합니다.
+					&nbsp;&nbsp;Range(“B2:C3”).Select // [B2:C3] 영역을 선택합니다.
 					<br />
-					&nbs;&nbs;Selection.Delete Shift:=xlToLeft // 선택한 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로 이동합니다.
+					&nbsp;&nbsp;Selection.Delete Shift:=xlToLeft // 선택한 영역을 삭제한 후 오른쪽에 있는 셀을 왼쪽으로
+					이동합니다.
 					<br />
 					End Sub
 				</VStack>
@@ -851,8 +852,7 @@ export const UC_2024_03: Question = {
 		},
 		{
 			contentId: 19,
-			question:
-				'<회원> 테이블의 내용이 다음과 같을 때 SQL문을 실행한 결과 표시되는 레코드의 수는?\nSELECT DISTINCT 이름\nFROM 회원\nWHERE 이름 Like “이*” OR 이름 = “강감찬”;',
+			question: '<회원> 테이블의 내용이 다음과 같을 때 SQL문을 실행한 결과 표시되는 레코드의 수는?',
 			questionBody: (
 				<VStack $gap="1.2rem">
 					<img src={IMAGES.Img_19} />
@@ -1104,7 +1104,7 @@ export const UC_2024_03: Question = {
 		{
 			contentId: 25,
 			question:
-				'아래의 프로시저를 이용하여 [A1:C3] 영역에서 내용만 지우려고 한다. 다음 중 괄호 안에 들어갈 코드로 옳은 것은?\nSub Procedure() Range(“A1:C3”).Select Selection.( ) End Sub',
+				'아래의 프로시저를 이용하여 [A1:C3] 영역에서 내용만 지우려고 한다. 다음 중 괄호 안에 들어갈 코드로 옳은 것은?',
 			questionBody: (
 				<RequestBody>
 					Sub Procedure() <br />
