@@ -1,23 +1,25 @@
+import Img_26 from './26.jpg';
+import Img_27 from './27.jpg';
 import Img_29 from './29.jpg';
-import Img_31 from './31.jpg';
-import Img_34 from './34.jpg';
+import Img_33 from './33.jpg';
 import Img_36 from './36.jpg';
-import Img_37 from './37.jpg';
 import Img_38 from './38.jpg';
 import Img_40 from './40.jpg';
-import Img_43 from './43.jpg';
-import Img_49 from './49.jpg';
-import Img_50 from './50.jpg';
+import Img_44 from './44.jpg';
+import Img_46 from './46.jpg';
+import Img_47 from './47.jpg';
+import Img_53 from './53.jpg';
 
 export default {
+	Img_26,
+	Img_27,
 	Img_29,
-	Img_31,
-	Img_34,
+	Img_33,
 	Img_36,
-	Img_37,
 	Img_38,
 	Img_40,
-	Img_43,
-	Img_49,
-	Img_50,
+	Img_44,
+	Img_46,
+	Img_47,
+	Img_53,
 };

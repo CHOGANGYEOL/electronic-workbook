@@ -17,12 +17,14 @@ import { UC_2024_06 } from './UC_2024_06';
 import { UC_2024_06_02 } from './UC_2024_06_02';
 import { UC_2024_06_03 } from './UC_2024_06_03';
 import { UC_2024_07 } from './UC_2024_07';
+import { UC_2024_08 } from './UC_2024_08';
 import { Data } from '../types';
 
 export const USING_COMPUTER: Data = {
 	title: '컴퓨터 활용 1급 필기',
 	key: 'USING_COMPUTER',
 	questions: [
+		UC_2024_08,
 		UC_2024_07,
 		UC_2024_06_03,
 		UC_2024_06_02,
