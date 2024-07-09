@@ -10,6 +10,9 @@
 	"orientation": "any",
 	"scope": "/electronic-workbook/",
 	"lang": "ko",
+	"id": "ElectronicWorkbook",
+	"display_override": ["standalone", "window-controls-overlay"],
+	"categories": ["books", "education"],
 	"icons": [
 		{
 			"src": "icons/windows11/SmallTile.scale-100.png",
@@ -459,7 +462,5 @@
 			"src": "icons/ios/1024.png",
 			"sizes": "1024x1024"
 		}
-	],
-	"display_override": ["standalone", "window-controls-overlay"],
-	"categories": ["books", "education"]
+	]
 }
