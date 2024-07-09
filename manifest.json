@@ -1,14 +1,14 @@
 {
 	"name": "ElectronicWorkbook",
 	"short_name": "EWorkbook",
-	"start_url": "https://chogangyeol.github.io/electronic-workbook/",
+	"start_url": "/electronic-workbook/",
 	"display": "standalone",
 	"background_color": "#FFFFFF",
 	"theme_color": "#000000",
 	"description": "자격증 필기 시험 준비용 전자 문제집",
 	"dir": "ltr",
 	"orientation": "any",
-	"scope": "https://chogangyeol.github.io/electronic-workbook/",
+	"scope": "/electronic-workbook/",
 	"lang": "ko",
 	"icons": [
 		{
