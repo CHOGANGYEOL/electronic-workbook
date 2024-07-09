@@ -8,11 +8,18 @@
 		<meta property="og:title" content="전자 문제집" />
 		<meta property="og:description" content="자격증 필기 시험 준비용 전자 문제집" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://chogangyeol.github.io/electronic-workbook/images/common/open_graph.jpg" />
+		<meta
+			property="og:image"
+			content="https://chogangyeol.github.io/electronic-workbook/images/common/open_graph.jpg"
+		/>
 		<meta property="og:site_name" content="전자 문제집" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<link rel="icon" href="/favicon.ico" />
+		<!-- 아이콘 link 설정 -->
+		<link rel="icon" href="icons/android-chrome-192x192.png" type="image/png" />
+		<link rel="alternate icon" href="icons/favicon.ico" type="ico" sizes="16x16" />
+		<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" sizes="180x180" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
@@ -20,5 +27,22 @@
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
+		<!-- pwa sw.js 정보 줄러오는 스크립트 추가 -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				// Register a service worker hosted at the root of the
+				// site using the default scope.
+				navigator.serviceWorker
+					.register('/sw.js')
+					.then((registration) => {
+						console.log('Service worker registration succeeded:', registration);
+					})
+					.catch((err) => {
+						console.log('Service worker registration failed:', error);
+					});
+			} else {
+				console.log('Service workers are not supported.');
+			}
+		</script>
 	</body>
 </html>

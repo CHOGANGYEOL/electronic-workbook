@@ -26,6 +26,6 @@
 		"noUnusedParameters": true, // 함수의 매개변수 중 사용되지 않는 것이 있으면 오류를 발생
 		"noUnusedLocals": true // 로컬 변수 중 사용되지 않는 변수가 있을 경우 오류를 발생
 	},
-	"include": ["src", "vite.config.ts"],
+	"include": ["src", "vite.config.ts", "sw.js"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
