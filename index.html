@@ -35,14 +35,11 @@
 		<div id="root"></div>
 		<!-- pwa sw.js 정보 줄러오는 스크립트 추가 -->
 		<script>
-			const BASE_URL = ''
-			const BASE_PATH = '/electronic-workbook';
-			console.log(window.location.origin);
 			if ('serviceWorker' in navigator) {
 				// Register a service worker hosted at the root of the
 				// site using the default scope.
 				navigator.serviceWorker
-					.register('/service-worker.js')
+					.register(window.location.origin + window.location.pathname + '/service-worker.js')
 					.then((registration) => {
 						// console.log('Service worker registration succeeded:', registration);
 						console.log('Service worker registration succeeded:');
