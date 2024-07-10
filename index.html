@@ -36,10 +36,16 @@
 		<!-- pwa sw.js 정보 줄러오는 스크립트 추가 -->
 		<script>
 			if ('serviceWorker' in navigator) {
+				const path = () => {
+					let pathname = window.location.pathname;
+					if (pathname[pathname.length - 1] !== '/') pathname += '/';
+					return window.location.origin + pathname;
+				};
+
 				// Register a service worker hosted at the root of the
 				// site using the default scope.
 				navigator.serviceWorker
-					.register('/electronic-workbook/service-worker.js')
+					.register(path() + 'service-worker.js')
 					.then((registration) => {
 						// console.log('Service worker registration succeeded:', registration);
 						console.log('Service worker registration succeeded:');
