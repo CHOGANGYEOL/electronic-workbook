@@ -1,7 +1,14 @@
 /* eslint-disable */
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = 'offline';
-const OFFLINE_URL = 'electronic-workbook/offline.html';
+
+const path = () => {
+	let pathname = window.location.pathname;
+	if (pathname[pathname.length - 1] !== '/') pathname += '/';
+	return window.location.origin + pathname;
+};
+
+const OFFLINE_FILE = 'offline.html';
 
 // install event
 self.addEventListener('install', async (event) => {
@@ -10,7 +17,7 @@ self.addEventListener('install', async (event) => {
 			const cache = await caches.open(CACHE_NAME);
 			// Setting {cache: 'reload'} in the new request will ensure that the response
 			// isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-			await cache.add(new Request(OFFLINE_URL, { cache: 'reload' }));
+			await cache.add(new Request(path() + OFFLINE_FILE, { cache: 'reload' }));
 		})(),
 	);
 });
