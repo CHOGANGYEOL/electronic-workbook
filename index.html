@@ -38,7 +38,6 @@
 			if ('serviceWorker' in navigator) {
 				const path = () => {
 					let pathname = window.location.pathname;
-					// console.log(pathname[pathname.length - 1])
 					if (pathname[pathname.length - 1] !== '/') pathname += '/';
 					return window.location.origin + pathname;
 				};
