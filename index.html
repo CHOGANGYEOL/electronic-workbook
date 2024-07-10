@@ -4,8 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Electronic Workbook</title>
-		<meta name="msapplication-TileColor" content="#000000" />
-		<meta name="theme-color" content="#000000" />
+		<!-- open graph tag -->
 		<meta property="og:url" content="https://chogangyeol.github.io/electronic-workbook/" />
 		<meta property="og:title" content="전자 문제집" />
 		<meta property="og:description" content="자격증 필기 시험 준비용 전자 문제집" />
@@ -17,27 +16,33 @@
 		<meta property="og:site_name" content="전자 문제집" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta name="theme-color" content="#8C383A" />
 
+		<!-- PWA Setting -->
+		<meta name="msapplication-TileColor" content="#000000" />
+		<meta name="theme-color" content="#000000" />
 		<link rel="icon" href="favicon.ico" />
 		<link rel="alternate icon" href="icons/android/android-launchericon-96-96.png" type="image/png" />
 		<link rel="apple-touch-icon" href="icons/ios/180.png" sizes="180x180" />
+		<link rel="manifest" href="/electronic-workbook/manifest.json" />
 
+		<!-- font setting -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-		<link rel="manifest" href="/electronic-workbook/manifest.json" />
 		<script type="module" crossorigin src="/electronic-workbook/assets/index-wMUvSp3m.js"></script>
 	</head>
 	<body>
 		<div id="root"></div>
 		<!-- pwa sw.js 정보 줄러오는 스크립트 추가 -->
 		<script>
+			const BASE_URL = ''
+			const BASE_PATH = '/electronic-workbook';
+			console.log(window.location.origin);
 			if ('serviceWorker' in navigator) {
 				// Register a service worker hosted at the root of the
 				// site using the default scope.
 				navigator.serviceWorker
-					.register('/electronic-workbook/service-worker.js')
+					.register('/service-worker.js')
 					.then((registration) => {
 						// console.log('Service worker registration succeeded:', registration);
 						console.log('Service worker registration succeeded:');
