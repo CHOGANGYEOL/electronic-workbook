@@ -2,12 +2,10 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Children } from '../types';
-
-interface TitleProps extends Children {
+interface TitleProps {
 	prefix?: React.ReactNode;
 }
-const Title = ({ children, prefix }: TitleProps) => {
+const Title = ({ children, prefix }: React.PropsWithChildren<TitleProps>) => {
 	return (
 		<Wrapper>
 			{children}

@@ -3,7 +3,6 @@ import { Dispatch, createContext, useContext, useMemo, useReducer } from 'react'
 import { RESET_STATE, SET_STATE, resetState, setState } from './action';
 import { ALL_DATA } from '../../assets/data';
 import { Content, Data, Question } from '../../assets/data/types';
-import { Children } from '../../components/Common/types';
 
 interface DetailContextValue {
 	data?: Data;
@@ -36,7 +35,7 @@ const reducer = (_: State, action: Action): State => {
 const DetailStateContext = createContext<DetailContextValue | null>(null);
 const DetailDispatchContext = createContext<DispatchAction | null>(null);
 
-export const DetailProvider = ({ children }: Children) => {
+export const DetailProvider = ({ children }: React.PropsWithChildren) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const { key, questionId } = state;
 	const data = useMemo(() => ALL_DATA.find((el) => el.key === key), [key]);

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import { Children } from '../../../components/Common/types';
-
-const RequestBody = ({ children }: Children) => {
+const RequestBody = ({ children }: React.PropsWithChildren) => {
 	return <Wrapper>{children}</Wrapper>;
 };
 const Wrapper = styled.div`

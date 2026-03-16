@@ -1,7 +1,8 @@
+import { TESAT } from './Tesat';
 import { Data, Question } from './types';
 import { USING_COMPUTER } from './UsingComputer';
 
-export const ALL_DATA: Data[] = [USING_COMPUTER];
+export const ALL_DATA: Data[] = [USING_COMPUTER, TESAT];
 
 export const MOCK_QUESTION_DATA: Question = {
 	questionId: 1,

@@ -1,8 +1,10 @@
+import React from 'react';
+
 import styled from 'styled-components';
 
-import { CSS, Children } from '../types';
+import { CSS } from '../types';
 
-const Article = ({ children, $css }: Children & CSS) => {
+const Article = ({ children, $css }: React.PropsWithChildren<CSS>) => {
 	return <Wrapper {...{ $css }}>{children}</Wrapper>;
 };
 

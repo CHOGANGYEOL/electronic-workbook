@@ -1,6 +1,9 @@
-import detail, { DetailProvider } from './detailContext';
-import { Children } from '../components/Common/types';
+import React from 'react';
 
-export const EntireContextProvider = ({ children }: Children) => <DetailProvider>{children}</DetailProvider>;
+import detail, { DetailProvider } from './detailContext';
+
+export const EntireContextProvider = ({ children }: React.PropsWithChildren) => (
+	<DetailProvider>{children}</DetailProvider>
+);
 
 export default { detail };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { css } from 'styled-components';
 
 import { ColorKeys } from '../../lib/styledComponents/function';
@@ -96,9 +94,6 @@ export interface FlexProps {
 	$alignSelf?: AlignSelf;
 }
 
-export interface Children {
-	children: React.ReactNode;
-}
 export interface CSS {
 	$css?: ReturnType<typeof css>;
 }
