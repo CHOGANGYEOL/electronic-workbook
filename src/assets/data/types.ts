@@ -7,7 +7,7 @@ interface Data {
 }
 
 interface Question {
-	questionId: number;
+	questionId: number | string;
 	title: string; // 2020년 1회차
 	total?: number; // 토탈 점수 - 넣지 않을 시 contents length
 	contents: Content[];
