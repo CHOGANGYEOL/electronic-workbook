@@ -13,7 +13,6 @@ import useQuestion from '../../feature/Question/useQuestion';
 
 const Question = () => {
 	const { question } = context.detail.useState();
-	console.info(question)
 
 	const questionData = useQuestion(question);
 	const { count, isComplete, history } = questionData;
