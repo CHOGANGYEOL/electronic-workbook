@@ -13,12 +13,14 @@ const Detail = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (key) {
-			dispatch(setState({ key, questionId: Number(questionId) }));
-		} else {
-			toast.error('잘못된 URL입니다.');
-			navigate(-1);
-		}
+		(() => {
+			if (!key) {
+				toast.error('잘못된 URL입니다.');
+				navigate(-1);
+				return;
+			}
+			dispatch(setState({ key, questionId: String(questionId) }));
+		})();
 	}, [key, questionId]);
 
 	return (

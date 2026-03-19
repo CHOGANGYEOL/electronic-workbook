@@ -12,7 +12,7 @@ interface DetailContextValue {
 
 export interface State {
 	key: string | null;
-	questionId: number | null;
+	questionId: string | null;
 }
 const initialState: State = {
 	key: null,
@@ -41,7 +41,7 @@ export const DetailProvider = ({ children }: React.PropsWithChildren) => {
 	const data = useMemo(() => ALL_DATA.find((el) => el.key === key), [key]);
 
 	const question = useMemo(
-		() => data?.questions.find((el) => el.questionId === Number(questionId)),
+		() => data?.questions.find((el) => String(el.questionId) === questionId),
 		[data, questionId],
 	);
 
