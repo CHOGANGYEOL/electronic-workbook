@@ -9,6 +9,7 @@ import context from '../../context';
 const Root = () => {
 	const { state } = useNavigation();
 	const { data } = context.detail.useState();
+
 	return (
 		<Container>
 			{state === 'loading' && <Loading />}

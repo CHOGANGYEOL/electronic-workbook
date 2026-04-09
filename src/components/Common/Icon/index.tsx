@@ -47,7 +47,7 @@ export const Icon = (props: IconProps) => {
 				$isDisabled,
 			}}
 		>
-			<use href={`/electronic-workbook/images/icons.svg#${iconID}`} />
+			<use href={`/images/icons.svg#${iconID}`} />
 		</Svg>
 	);
 };

@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
 		element: <Root />,
 		children: [
 			{
-				path: '',
+				index: true,
 				element: <Pages.Main />,
 			},
 			{
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
 				element: <Detail />,
 				children: [
 					{
-						path: '',
+						index: true,
 						element: <Pages.Data />,
 					},
 					{
