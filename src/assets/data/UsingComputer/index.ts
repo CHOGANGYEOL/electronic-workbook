@@ -1,4 +1,4 @@
-// import { UC_2020_01 } from './UC_2020_01';
+import { UC_2020_01 } from './UC_2020_01';
 import { UC_2020_02 } from './UC_2020_02';
 import { UC_2022_01 } from './UC_2022_01';
 import { UC_2022_02 } from './UC_2022_02';
@@ -43,6 +43,6 @@ export const USING_COMPUTER: Data = {
 		UC_2022_02,
 		UC_2022_01,
 		UC_2020_02,
-		// UC_2020_01,
+		UC_2020_01,
 	],
 };
